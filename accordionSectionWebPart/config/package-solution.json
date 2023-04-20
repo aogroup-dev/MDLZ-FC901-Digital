@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "digital-page-web-part-client-side-solution",
+    "id": "3883ec27-497c-4437-8729-4c284f63a24f",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.16.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "digitalPageWebPart description"
+      },
+      "longDescription": {
+        "default": "digitalPageWebPart description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "digital-page-web-part Feature",
+        "description": "The feature that activates elements of the digital-page-web-part solution.",
+        "id": "ecf6d94d-e4ed-426a-9601-751a1a6a262e",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/digital-page-web-part.sppkg"
+  }
+}

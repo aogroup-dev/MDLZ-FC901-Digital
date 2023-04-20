@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "digital-page-web-part-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/digitalPageWebPart/DigitalPageWebPartWebPart.js",
+          "manifest": "./src/webparts/digitalPageWebPart/DigitalPageWebPartWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "DigitalPageWebPartWebPartStrings": "lib/webparts/digitalPageWebPart/loc/{locale}.js"
+  }
+}
