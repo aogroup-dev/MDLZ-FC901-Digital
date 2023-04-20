@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "accordion-footer-web-part-client-side-solution",
+    "id": "18d1287a-69ee-49f4-a203-2b83f904fe44",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.16.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "AccordionFooterWebPart description"
+      },
+      "longDescription": {
+        "default": "AccordionFooterWebPart description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "accordion-footer-web-part Feature",
+        "description": "The feature that activates elements of the accordion-footer-web-part solution.",
+        "id": "0cccfff5-6d18-45c5-b1ce-6d9ad10283b6",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/accordion-footer-web-part.sppkg"
+  }
+}
