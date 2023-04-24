@@ -23,7 +23,7 @@ function AccordionFourComponent(){
                     </h2>
                     <div id="flush-collapseOne-4" className="accordion-collapse-4 collapse link-box" aria-labelledby="flush-headingOne-4">
                         <div className="accordion-body">
-                            <a href="#">Digital R&D Centre of Excellence CoE</a>
+                            <a href="#">Digital R&D Centre of Excellence &#40;CoE&#41;</a>
                         </div>
                     </div>
                 </div>

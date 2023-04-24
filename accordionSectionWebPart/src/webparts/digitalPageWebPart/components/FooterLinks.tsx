@@ -13,7 +13,7 @@ function FooterLinksComponent(){
         <div className="col col-md-6 col-lg-3 box">
         <img src={img} alt="" className="img-fluid"/>
         <div className="grey-digital-links">
-            <div className="enterpise-digital-links2">
+            <div className="enterpise-digital-links">
                 <h5 className='headings text-uppercase'>ENTERPRISE DIGITAL LINKS</h5>
             </div>
             <div className="e-links">
