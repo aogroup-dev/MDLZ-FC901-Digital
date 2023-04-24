@@ -1,0 +1,74 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.allNews {
+  display: block;
+}
+input[type=radio],
+input[type=radio] + div {
+  display: none;
+}
+input[type=radio]:checked + div {
+  display: block;
+}
+hr {
+  border: 0.05em solid #FFF;
+}
+.listData {
+  background-color: #e2ebf3;
+  padding: 20px;
+}
+
+.allNews > ul > li {
+  clear: both;
+}
+
+.filters {
+  display: block;
+}
+
+label {
+  background-color: #2d6eaa;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 22px;
+  font-family: MDLZ,sans-serif;
+  margin-bottom: 2px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  width: 100%;
+}
+label.active {
+  color: #2d6eaa;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+ul.listNews li a {
+  color: #000;
+  display: inline-block;
+  padding: 5px 0;
+  text-decoration: none;
+  width: 50%;
+}
+
+div.pagination {
+  display: flex;
+}
+div.pagination ul {
+  margin-left: auto;
+}
+div.pagination ul li {
+  display: inline;
+}
+div.pagination ul li a {
+  color: #81a8cc;
+  list-style: none;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+div.pagination ul li a.active {
+  border: 1px solid #81a8cc;
+  color: #2d6eaa;
+}
