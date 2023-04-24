@@ -1130,10 +1130,17 @@ var HelloWorld = /** @class */ (function (_super) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this._sp.web.lists
                             .getByTitle("Pages")
-                            .items.select("Id", "Title", "Business")()];
+                            .items.select("Id", "Title", "PublishingPageLayout", "News_x0020_Type", "Created") // "PublishingPageContent",
+                            .orderBy("Created", false)
+                            .top(1000)
+                            // .filter("News_x0020_Type eq 'Allocations'")
+                            .filter("News_x0020_Type eq 'Allocations' and (Created gt '2022-01-01' and Created lt '2023-01-01')")()];
                     case 1:
                         list = _a.sent();
-                        console.log(list);
+                        list.forEach(function (el) {
+                            console.log(el);
+                        });
+                        console.log("Count ", list.length);
                         return [2 /*return*/];
                 }
             });

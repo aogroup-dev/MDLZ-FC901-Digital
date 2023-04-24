@@ -20,9 +20,17 @@ export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
   public getListByTilte = async () => {
     const list = await this._sp.web.lists
       .getByTitle("Pages")
-      .items.select("Id", "Title", "Business")();
+      .items.select("Id", "Title", "PublishingPageLayout", "News_x0020_Type", "Created") // "PublishingPageContent",
+      .orderBy("Created", false)
+      .top(1000)
+      // .filter("News_x0020_Type eq 'Allocations'")
+      .filter("News_x0020_Type eq 'Allocations' and (Created gt '2022-01-01' and Created lt '2023-01-01')")
+      ();
 
-    console.log(list);
+      // list.forEach(el => {
+      //   console.log(el);
+      // });
+      console.log("Count ", list.length);
   };
 
   public render(): React.ReactElement<IHelloWorldProps> {
