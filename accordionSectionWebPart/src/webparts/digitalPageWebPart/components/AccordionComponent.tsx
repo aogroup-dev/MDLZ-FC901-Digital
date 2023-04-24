@@ -62,11 +62,11 @@ function AccordionSection(props: IAccordionSection){
 return (
     <div className="container main p-0">
         <div className="row">
-        <div className="col col-md-6 col-lg-3 box-1 p-1">
+        <div className="col col-md-6 col-lg-3 box">
                 <img className="img-fluid" src={img} alt=""/>
                 <div className="accordion-box" id="accordionFlushExample">
-                    <div className="purpose-heading headings">
-                        <h5>{props.title}</h5>
+                    <div className="purpose-heading">
+                        <h5 className='headings text-uppercase'>{props.title}</h5>
                     </div>
                     <div className="accordion accordion-flush">
                         <div className="accordion-item">

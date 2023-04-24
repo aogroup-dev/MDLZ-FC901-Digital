@@ -8,11 +8,11 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 function AccordionThreeComponent(){
 
     return (
-        <div className="col col-md-6 col-lg-3 box-3 p-1">
+        <div className="col col-md-6 col-lg-3 box">
         <img className="img-fluid" src={img} alt=""/>
         <div className="accordion-box-3">
-            <div className="workstreams-heading headings">
-                <h5>WORKSTREAMS</h5>
+            <div className="workstreams-heading">
+                <h5 className='headings text-uppercase'>WORKSTREAMS</h5>
             </div>
             <div className="accordion accordion-flush" id="accordionFlushExample-3">
                 <div className="accordion-item">

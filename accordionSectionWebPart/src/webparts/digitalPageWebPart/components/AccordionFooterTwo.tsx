@@ -8,11 +8,11 @@ import '../components/AccordionComponent.scss'
 function AccordionFooterTwoComponent(){
 
     return (
-        <div className="col col-md-6 col-lg-3 box-6">
+        <div className="col col-md-6 col-lg-3 box">
                     <img className="img-fluid" src={img} alt=""/>
                     <div className="accordion-box-6" id="accordionFlushExample-6">
-                        <div className="career-heading headings">
-                            <h5>CAREER</h5>
+                        <div className="career-heading">
+                            <h5 className='headings text-uppercase'>CAREER</h5>
                         </div>
                         <div className="accordion accordion-flush">
                             <div className="accordion-item">

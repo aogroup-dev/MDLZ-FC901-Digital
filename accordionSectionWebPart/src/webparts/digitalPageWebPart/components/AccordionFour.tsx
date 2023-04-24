@@ -8,11 +8,11 @@ import '../components/AccordionComponent.scss'
 function AccordionFourComponent(){
 
     return (
-        <div className="col col-md-6 col-lg-3 box-4 p-1">
+        <div className="col col-md-6 col-lg-3 box">
         <img className="img-fluid" src={img} alt=""/>
         <div className="accordion-box-4">
-            <div className="people-heading headings">
-                <h5>PEOPLE</h5>
+            <div className="people-heading">
+                <h5 className='headings text-uppercase'>PEOPLE</h5>
             </div>
             <div className="accordion accordion-flush" id="accordionFlushExample-4">
                 <div className="accordion-item">

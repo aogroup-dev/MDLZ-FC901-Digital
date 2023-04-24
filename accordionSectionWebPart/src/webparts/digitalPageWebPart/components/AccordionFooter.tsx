@@ -10,12 +10,12 @@ import FooterLinkBoxComponent from './FooterLinkBox';
 
 function AccordionFooterComponent() {
     return (
-        <div className="row pt-4">
-        <div className="col col-md-6 col-lg-3 box-5">
+        <div className="row footer">
+        <div className="col col-md-6 col-lg-3 box">
             <img src={img} alt="" className="img-fluid"/>
             <div className="accordion-box-5" id="accordionFlushExample-5">
-                <div className="news-heading headings">
-                    <h6>NEWS AND SUCCESS</h6>
+                <div className="news-heading">
+                    <h5 className='headings text-uppercase'>NEWS AND SUCCESS</h5>
                 </div>
                 <div className="accordion accordion-flush">
                     <div className="accordion-item">

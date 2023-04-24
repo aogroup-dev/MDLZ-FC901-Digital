@@ -1,30 +1,22 @@
-// .accImg {
-    
-//     width: 100%;
-// }
+body {
+    font-family: 'Open Sans', sans-serif;
+}
 
 
-// .content {
-//     h3 {
-//         padding-left: 10px;
-//         margin: 0;
-//         background-color: #287819;
-//         color: white;
-//     }
-//     background-color: #72a769;
-//     ul {
-//         list-style: none;
-//         margin-top: 5px;
-//         padding-left: 10px;
-//         margin-bottom: 0px;
-//     }
-//     li {
-//         border-bottom: 1px white solid;
-//     }
-// }
-// .accordion-button {
-//     background-color: #539347;
-// }
+.row{
+    .box{
+        padding: 10px;
+    }
+    .footer {
+        padding-top: 30px;
+    }
+
+} 
+
+.headings {
+    margin-bottom: 0px;
+    padding: 16px;
+}
 
 .accordion .button-last{
     &.collapsed{
@@ -32,17 +24,23 @@
     }
 }
 
-.last-button.collapsed{
-    padding-bottom: 90px;
+.accordion .last-button.collapsed{
+    padding-bottom: 104px;
 }
 
-.last-button-2.collapsed {
-    padding-bottom: 56px;
+.accordion .last-button-2.collapsed {
+    padding-bottom: 39px;
 }
 
-.last-button-3.collapsed{
-    padding-bottom: 69PX;
+.accordion .last-button-3.collapsed{
+    padding-bottom: 37PX;
 }
+
+// .img-pic {
+//     background-image: url('../assets/links.png');
+//     background-size: contain;
+//     background-repeat: no-repeat;
+// }
 
 
 
@@ -72,15 +70,6 @@
     background-color: #c97b7b;
 }
 
-
-
-// .button-2
-
-
-// .button-3:not(.collapsed){
-//     color: white;
-//     background-color:;
-// }
 .button-4:not(.collapsed){
     color: white;
     background-color: #c97b7b;
@@ -241,58 +230,60 @@
 .purpose-heading {
     background-color: #287819;
     color: white;
-    padding-bottom: 1px;
-    padding: 4px;
-    padding-left: 15px;
+    // padding-bottom: 1px;
+    // padding: 4px;
+    // padding-left: 15px;
 }
 .capabilities-heading {
     background-color: #2d6eaa;
     color: white;
-    padding-bottom: 1px;
-    padding: 4px;
-    padding-left: 15px;
+    // padding-bottom: 1px;
+    // padding: 4px;
+    // padding-left: 15px;
 }
 .workstreams-heading {
     background-color: #e6af23;
     color: white;
-    padding-bottom: 1px;
-    padding: 4px;
-    padding-left: 15px;
+    // padding-bottom: 1px;
+    // padding: 4px;
+    // padding-left: 15px;
 }
 .people-heading {
     background-color: #a52323;
     color: white;
-    padding-bottom: 1px;
-    padding: 4px;
-    padding-left: 15px;
+    // padding-bottom: 1px;
+    // padding: 4px;
+    // padding-left: 15px;
 }
 
 // footer-section 
 
 .news-heading {
+    white-space: nowrap;
     background-color: #623e24;
     color: white;
-    padding: 1px;
+    // padding: 1px;
     // padding-left: 15px;
 }
 
 .career-heading {
     background-color: #724d8d;
     color: white;
-    padding: 4px;
-    padding-left: 15px;
+    // padding: 4px;
+    // padding-left: 15px;
 }
 
 .grey-digital-links{
     background-color:#9d9d9d;
-    height: 174px;
+    height: 195px;
 }
 
 .enterpise-digital-links2 {
+    white-space: nowrap;
     background-color: #666666;
     color: white;
     padding: 4px;
-    padding-left: 15px;
+    // padding-left: 15px;
 }
 
 .link{
@@ -325,8 +316,11 @@
 
 .digital-links-box{
     background-color:#eaab5e;
-    height: 408px;
-    position: relative;
+    height: 356px;
+    background-image: url('../assets/links.png');
+    background-size: 120px 130px;
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 .enterpise-digital-links {
@@ -370,18 +364,6 @@
     }
 }
 
-// .accordion-button:not(.collapsed)::after {
-//     background-image: url("../assets/minus.png");
-//     background-size: auto;
-//     background-position: center;
-//     background-repeat: no-repeat;
-// }
-    
-// .accordion-button.collapsed::after {
-//     background-image: url("../assets/plus.png");
-//     background-size: auto;
-//     background-position: center;
-// }
 .accordion .accordion-button {
     &.collapsed::after {
         background-image: url("../assets/mini-plus.png");

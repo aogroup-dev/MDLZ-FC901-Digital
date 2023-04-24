@@ -8,11 +8,11 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 function AccordionTwoComponent(){
 
     return (
-        <div className="col col-md-6 col-lg-3 box-2 p-1">
+        <div className="col col-md-6 col-lg-3 box">
         <img className="img-fluid" src={img} alt=""/>
         <div className="accordion-box-2">
-            <div className="capabilities-heading headings">
-                <h5>CAPABILITIES</h5>
+            <div className="capabilities-heading">
+                <h5 className='headings text-uppercase'>CAPABILITIES</h5>
             </div>
             <div className="accordion accordion-flush" id="accordionFlushExample-2">
                 <div className="accordion-item">
