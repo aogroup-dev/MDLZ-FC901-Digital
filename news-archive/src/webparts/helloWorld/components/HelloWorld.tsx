@@ -1,10 +1,31 @@
-import * as React from 'react';
-import styles from './HelloWorld.module.scss';
-import { IHelloWorldProps } from './IHelloWorldProps';
+import * as React from "react";
+import { SPFI } from "@pnp/sp";
+
+import styles from "./HelloWorld.module.scss";
+import { IHelloWorldProps } from "./IHelloWorldProps";
+import { getSP } from "../pnpjsConfig";
 
 export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
-  public render(): React.ReactElement<IHelloWorldProps> {
+  private _sp: SPFI;
 
+  constructor(props: any) {
+    super(props);
+    this._sp = getSP();
+  }
+
+  public componentDidMount(): void {
+    this.getListByTilte();
+  }
+
+  public getListByTilte = async () => {
+    const list = await this._sp.web.lists
+      .getByTitle("Pages")
+      .items.select("Id", "Title", "Business")();
+
+    console.log(list);
+  };
+
+  public render(): React.ReactElement<IHelloWorldProps> {
     return (
       <section className={styles.allNews}>
         <h2>All News</h2>
@@ -18,20 +39,42 @@ export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
                 <hr />
                 <ul className={styles.listNews}>
                   <li>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
                   </li>
                 </ul>
                 <div className={styles.pagination}>
                   <ul>
-                    <li><a className={styles.active} href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
+                    <li>
+                      <a className={styles.active} href="#">
+                        1
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">2</a>
+                    </li>
+                    <li>
+                      <a href="#">3</a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -46,20 +89,42 @@ export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
                 <hr />
                 <ul className={styles.listNews}>
                   <li>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
                   </li>
                 </ul>
                 <div className={styles.pagination}>
                   <ul>
-                    <li><a className={styles.active} href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
+                    <li>
+                      <a className={styles.active} href="#">
+                        1
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">2</a>
+                    </li>
+                    <li>
+                      <a href="#">3</a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -74,20 +139,42 @@ export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
                 <hr />
                 <ul className={styles.listNews}>
                   <li>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
                   </li>
                 </ul>
                 <div className={styles.pagination}>
                   <ul>
-                    <li><a className={styles.active} href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
+                    <li>
+                      <a className={styles.active} href="#">
+                        1
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">2</a>
+                    </li>
+                    <li>
+                      <a href="#">3</a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -102,20 +189,42 @@ export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
                 <hr />
                 <ul className={styles.listNews}>
                   <li>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
-                    <a href="#">Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;</a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
+                    <a href="#">
+                      Lorem ipsum dolorconsectetuer adipiscing sit amet &gt;
+                    </a>
                   </li>
                 </ul>
                 <div className={styles.pagination}>
                   <ul>
-                    <li><a className={styles.active} href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
+                    <li>
+                      <a className={styles.active} href="#">
+                        1
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">2</a>
+                    </li>
+                    <li>
+                      <a href="#">3</a>
+                    </li>
                   </ul>
                 </div>
               </div>
