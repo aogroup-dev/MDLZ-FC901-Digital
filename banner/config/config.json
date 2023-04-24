@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "digital-rn-d-banner-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/digitalRnDBanner/DigitalRnDBannerWebPart.js",
+          "manifest": "./src/webparts/digitalRnDBanner/DigitalRnDBannerWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "DigitalRnDBannerWebPartStrings": "lib/webparts/digitalRnDBanner/loc/{locale}.js"
+  }
+}

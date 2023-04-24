@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "16.19.0",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.9.1"
+    },
+    "version": "1.17.1",
+    "libraryName": "digital-rn-d-banner",
+    "libraryId": "16a3444f-54de-420a-b676-17a2cd6f1754",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "Digital RnD - Banner",
+    "solutionShortDescription": "Digital RnD - Banner description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

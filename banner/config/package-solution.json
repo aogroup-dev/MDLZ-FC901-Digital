@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "digital-rn-d-banner-client-side-solution",
+    "id": "16a3444f-54de-420a-b676-17a2cd6f1754",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.17.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "Digital RnD - Banner description"
+      },
+      "longDescription": {
+        "default": "Digital RnD - Banner description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "digital-rn-d-banner Feature",
+        "description": "The feature that activates elements of the digital-rn-d-banner solution.",
+        "id": "10979cb7-ea13-405c-a225-14936d169885",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/digital-rn-d-banner.sppkg"
+  }
+}

@@ -1,0 +1,28 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.digitalRnDBanner {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.banner {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 20vh;
+  padding: 15px;
+}
+.banner div {
+  align-self: flex-end;
+  max-width: 25%;
+}
+.banner p {
+  color: #666;
+  margin-bottom: 0;
+}
