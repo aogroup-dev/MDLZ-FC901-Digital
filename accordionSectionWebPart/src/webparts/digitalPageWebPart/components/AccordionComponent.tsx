@@ -7,6 +7,7 @@ import AccordionTwoComponent from './AccordionTwo';
 import AccordionThreeComponent from './AccordionThree';
 import AccordionFourComponent from './AccordionFour';
 import AccordionFooterComponent from './AccordionFooter';
+import ToolBoxSectionComponent from './ToolBoxSection';
 
 
 interface IAccordionSection{
@@ -128,6 +129,7 @@ return (
             <AccordionFourComponent/>
         </div>
         <AccordionFooterComponent/>
+        <ToolBoxSectionComponent/>
     </div>
 );
 }

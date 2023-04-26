@@ -20,16 +20,16 @@ body {
 
 .accordion .button-last{
     &.collapsed{
-        padding-bottom: 30px;
+        padding-bottom: 45px;
     }
 }
 
 .accordion .last-button.collapsed{
-    padding-bottom: 132px;
+    padding-bottom: 82px;
 }
 
 .accordion .last-button-2.collapsed {
-    padding-bottom: 48px;
+    padding-bottom: 45px;
 }
 
 .accordion .last-button-3.collapsed{
@@ -281,7 +281,7 @@ body {
 
 .grey-digital-links{
     background-color:#9d9d9d;
-    height: 205px;
+    height: 203px;
 }
 
 .enterpise-digital-links {
@@ -325,11 +325,11 @@ body {
 
 .digital-links-box{
     background-color:#eaab5e;
-    height: 366px;
+    height: 444px;
     background-image: url('../assets/links.png');
-    background-size: 120px 130px;
+    background-size: 190px 190px;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: 25px 233px;
 }
 
 .digital-Quick-links {
@@ -386,5 +386,22 @@ body {
         background-repeat: no-repeat;
     }
 }
+
+// bottom section 
+.toolbox-header {
+    background-color: #578bbb;
+}
+
+.toolbox-section {
+    min-height: 200px;
+    background-color: #eaf0f7;
+}
+
+// #toolbox {
+//     display: none;
+// }
+// #toolbox:target {
+//     display: block;
+// }
 
 

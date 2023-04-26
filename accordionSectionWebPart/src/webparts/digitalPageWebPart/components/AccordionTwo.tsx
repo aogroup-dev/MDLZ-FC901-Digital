@@ -7,6 +7,15 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function AccordionTwoComponent(){
 
+    function showSection(){
+        const section = document.getElementById('toolbox');
+        if (section.style.display === "none") {
+            section.style.display = "block";
+        } else {
+            section.style.display = "none";
+        }
+    }
+
     return (
         <div className="col col-md-6 col-lg-3 box">
         <img className="img-fluid" src={img} alt=""/>
@@ -23,7 +32,7 @@ function AccordionTwoComponent(){
                     </h2>
                     <div id="flush-collapseOne-2" className="accordion-collapse-2 collapse link-box" aria-labelledby="flush-headingOne-2">
                         <div className="accordion-body">
-                        <a href="#">R&D Digital Toolbox 
+                        <a href="#toolbox" onClick={showSection}>R&D Digital Toolbox 
                             User Guide</a>    
                         </div>
                     </div>
