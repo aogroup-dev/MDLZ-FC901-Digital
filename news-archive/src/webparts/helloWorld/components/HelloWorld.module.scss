@@ -53,6 +53,10 @@ ul.listNews li a {
   width: 50%;
 }
 
+ul.listNews li a:hover {
+  color: #666666;
+}
+
 div.pagination {
   display: flex;
 }

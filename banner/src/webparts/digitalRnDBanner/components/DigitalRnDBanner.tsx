@@ -39,9 +39,9 @@ export default class DigitalRnDBanner extends React.Component<IDigitalRnDBannerP
     return (
       <section>
         <div className={styles.banner} style={{backgroundImage: `url(${bannerBG})`}}>
-          <div>
+          <div className={styles.content}>
             <img src={bannerLogo} alt="Digital R&D" />
-            <p>
+            <p className={styles.text}>
               {escape(bannerDesc)}
             </p>
           </div>

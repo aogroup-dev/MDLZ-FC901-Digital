@@ -1,4 +1,14 @@
-body {
+@font-face {
+    font-family: "MDLZ";
+    src:  url("https://collaboration.mdlz.com/:u:/r/sites/MondelezUSteamportal/SiteAssets/spfx_images/MDLZBITETYPE-Regular.otf");
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url("https://collaboration.mdlz.com/:u:/r/sites/MondelezUSteamportal/SiteAssets/spfx_fonts/OpenSans_Condensed-Regular.ttf?csf=1&web=1&e=EchhSE%22");
+    font-display: swap;
+}
+
+.main {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -9,11 +19,13 @@ body {
     }
     .footer {
         padding-top: 30px;
+        padding-bottom: 30px;
     }
 
 } 
 
 .headings {
+    font-family: "MDLZ", sans-serif;
     margin-bottom: 0px;
     padding: 16px;
 }
@@ -35,14 +47,6 @@ body {
 .accordion .last-button-3.collapsed{
     padding-bottom: 67PX;
 }
-
-// .img-pic {
-//     background-image: url('../assets/links.png');
-//     background-size: contain;
-//     background-repeat: no-repeat;
-// }
-
-
 
 
 .button-3 {
@@ -152,7 +156,7 @@ body {
     font-size: 15px;
     font-weight: 300;
     // border-top: 1px white solid;
-    // border-bottom: 1px white solid;
+    border-bottom: 1px white solid;
     padding: 0;
     padding-left: 16px;
     padding-top: 8px;
@@ -228,7 +232,7 @@ body {
     border: none;
 }
 .purpose-heading {
-    background-color: #287819;
+    // background-color: #287819;
     color: white;
     border-bottom: 1px white solid;
     // padding-bottom: 1px;
@@ -236,7 +240,7 @@ body {
     // padding-left: 15px;
 }
 .capabilities-heading {
-    background-color: #2d6eaa;
+    // background-color: #2d6eaa;
     color: white;
     border-bottom: 1px white solid;
     // padding-bottom: 1px;
@@ -244,7 +248,7 @@ body {
     // padding-left: 15px;
 }
 .workstreams-heading {
-    background-color: #e6af23;
+    // background-color: #e6af23;
     color: white;
     border-bottom: 1px white solid;
     // padding-bottom: 1px;
@@ -252,7 +256,7 @@ body {
     // padding-left: 15px;
 }
 .people-heading {
-    background-color: #a52323;
+    // background-color: #a52323;
     color: white;
     border-bottom: 1px white solid;
     // padding-bottom: 1px;
@@ -325,7 +329,7 @@ body {
 
 .digital-links-box{
     background-color:#eaab5e;
-    height: 444px;
+    height: 453px;
     background-image: url('../assets/links.png');
     background-size: 190px 190px;
     background-repeat: no-repeat;
@@ -386,6 +390,15 @@ body {
         background-repeat: no-repeat;
     }
 }
+.accordion .no-plus {
+    &.collapsed::after {
+        background-image: none;
+    }
+
+    &:not(.collapsed)::after{
+        background-image: none;
+    }
+}
 
 // bottom section 
 .toolbox-header {
@@ -393,7 +406,7 @@ body {
 }
 
 .toolbox-section {
-    min-height: 200px;
+    min-height: 400px;
     background-color: #eaf0f7;
 }
 

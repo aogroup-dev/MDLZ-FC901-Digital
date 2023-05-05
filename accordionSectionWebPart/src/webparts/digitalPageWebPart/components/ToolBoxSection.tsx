@@ -10,7 +10,7 @@ function ToolBoxSectionComponent() {
     return (
         <section id='toolbox' className="toolbox-section" style={{display: 'none'}}>
             <div className="toolbox-header">
-                <h5 className='text-uppercase text-white text-center'>R&D digital toolbox user guide</h5>
+                <h5 className='text-uppercase text-white text-center headings'>R&D digital toolbox user guide</h5>
             </div>
         </section>
     );

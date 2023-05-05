@@ -1,12 +1,12 @@
 /* tslint:disable */
 require("./HelloWorld.module.css");
 var styles = {
-    allNews: 'allNews_2d5c284f',
-    listData: 'listData_2d5c284f',
-    filters: 'filters_2d5c284f',
-    active: 'active_2d5c284f',
-    listNews: 'listNews_2d5c284f',
-    pagination: 'pagination_2d5c284f'
+    allNews: 'allNews_953ed518',
+    listData: 'listData_953ed518',
+    filters: 'filters_953ed518',
+    active: 'active_953ed518',
+    listNews: 'listNews_953ed518',
+    pagination: 'pagination_953ed518'
 };
 export default styles;
 /* tslint:enable */ 

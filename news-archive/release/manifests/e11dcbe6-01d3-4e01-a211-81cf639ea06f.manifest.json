@@ -38,7 +38,7 @@
     "scriptResources": {
       "hello-world-web-part": {
         "type": "path",
-        "path": "hello-world-web-part.js"
+        "path": "hello-world-web-part_662026855d53837c5b87.js"
       },
       "@microsoft/sp-property-pane": {
         "type": "component",
@@ -67,7 +67,7 @@
       },
       "HelloWorldWebPartStrings": {
         "type": "path",
-        "path": "HelloWorldWebPartStrings_en-us.js"
+        "path": "HelloWorldWebPartStrings_en-us_e8a849b581bbcb862b8824f17050cd4f.js"
       }
     }
   }

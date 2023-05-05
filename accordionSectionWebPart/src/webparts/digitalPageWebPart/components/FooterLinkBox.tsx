@@ -12,7 +12,7 @@ function FooterLinkBoxComponent() {
         <div className="col col-md-6 col-lg-3 box">
         <div className="digital-links-box">
             <div className="digital-Quick-links">
-                <h5 className='text-uppercase headings'>DIGITAL R&D QUICK LINKS</h5>
+                <h5 className='text-uppercase headings'>Enterprise Digital Links</h5>
             </div>
             <div className="e-links">
                 <a href="#" className="link">Wiki / FAQs &gt;</a>

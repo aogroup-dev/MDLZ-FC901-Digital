@@ -1,5 +1,55 @@
 @import '~@fluentui/react/dist/sass/References.scss';
 
+:global {
+  div#spSiteHeader > div {
+    background-color: white;
+  }
+
+  .ms-HorizontalNavItem-linkText.is-header {
+    color: #878787;
+  }
+  a.ms-HorizontalNavItem-link:hover{
+    color: #666;
+  }
+  span.ms-HorizontalNavItem a span {
+    font-weight: 600;
+    color: #878787 !important;
+  }
+  .ms-HorizontalNav-chevronDown {
+    color: #878787 !important;
+  }
+  h3.ms-Menu-heading:hover {
+    background-color: #eee;
+  }
+  a.title-53, .titleSubcell-52 {
+    color: #878787;
+  }
+  a.title-53:hover, .titleSubcell-52{
+    color: #666;
+  }
+  
+  .editButton-80 {
+    color: #666;
+  }
+
+  .root-142 .ms-Button-icon {
+    color: #878787;
+  }
+
+  .root-142:hover .ms-Button-icon {
+    color: #666;
+  }
+
+  .ms-ButtonSpan {
+    color: #878787;
+  }
+
+}
+
+
+
+
+
 .digitalRnDBanner {
   overflow: hidden;
   padding: 1em;
@@ -11,18 +61,47 @@
 }
 
 .banner {
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
   background-size: cover;
-  display: flex;
-  height: 20vh;
-  padding: 15px;
+  padding: 141px;
+  // height: 300px;
+
+  // // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // display: flex;
+  // height: 36vh;
+  // padding: 20px;
+  // align-items: center;
 }
-.banner div {
-  align-self: flex-end;
-  max-width: 25%;
+// .content {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+// }
+
+.content img {
+  position: absolute;
+  width: 280px;
+  top: 33%;
+  left: 5%;
 }
+
+// .banner div {
+//   align-self: flex-end;
+//   max-width: 25%;
+// }
 .banner p {
   color: #666;
   margin-bottom: 0;
+  word-break: break-word;
+}
+
+.text {
+  position: absolute;
+  top: 67%;
+  left: 5%;
+  font-weight: 400;
+  color: #666;
+  width: 240px;
 }

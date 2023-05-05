@@ -1,18 +1,14 @@
 import * as React from 'react';
-import img from '../assets/purpose.jpg';
-import '../components/AccordionComponent.scss'
+// import img from '../assets/purpose.jpg';
+import '../components/AccordionComponent.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import AccordionTwoComponent from './AccordionTwo';
-import AccordionThreeComponent from './AccordionThree';
-import AccordionFourComponent from './AccordionFour';
-import AccordionFooterComponent from './AccordionFooter';
-import ToolBoxSectionComponent from './ToolBoxSection';
 
 
 interface IAccordionSection{
+    image: string;
     title: string;
-    subTitle: string;
+    colour: string;
 }
 
 function AccordionSection(props: IAccordionSection){
@@ -61,27 +57,25 @@ function AccordionSection(props: IAccordionSection){
     //     ],
     // };
 return (
-    <div className="container main p-0">
-        <div className="row">
-        <div className="col col-md-6 col-lg-3 box">
-                <img className="img-fluid" src={img} alt=""/>
+    <div className="col col-md-6 col-lg-3 box">
+                <img className="img-fluid" src={props.image} alt=""/>
                 <div className="accordion-box" id="accordionFlushExample">
-                    <div className="purpose-heading">
+                    <div className="purpose-heading" style={{backgroundColor: props.colour}}>
                         <h5 className='headings text-uppercase'>{props.title}</h5>
                     </div>
                     <div className="accordion accordion-flush">
                         <div className="accordion-item">
                             <h2 className="accordion-header" id="flush-headingOne-1">
                             <a href="" className="buttons focus button-1  accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-1" aria-expanded="false" aria-controls="flush-collapseOne-1">
-                                {props.subTitle}
+                                Digital R&D
                             </a>
                             </h2>
-                            <div id="flush-collapseOne-1" className="accordion-collapse-1 collapse link-box" aria-labelledby="flush-headingOne-1">
+                            <div id="flush-collapseOne-1" className="accordion-collapse-1 collapse link-box" aria-labelledby="flush-headingOne-1" data-bs-parent="#accordionFlushExample">
                                 <div className="accordion-body">
                                     <a href="#"> Documents</a>
                                 </div>
                             </div>
-                            <div id="flush-collapseOne-1" className="accordion-collapse-1 collapse link-box" aria-labelledby="flush-headingOne-1">
+                            <div id="flush-collapseOne-1" className="accordion-collapse-1 collapse link-box" aria-labelledby="flush-headingOne-1" data-bs-parent="#accordionFlushExample">
                                 <div className="accordion-body">
                                     <a href="#">Videos</a>
                                 </div>
@@ -93,12 +87,12 @@ return (
                                 R&D Vision 2030
                             </a>
                             </h2>
-                            <div id="flush-collapseTwo-1" className="accordion-collapse-1 collapse link-box" aria-labelledby="flush-headingTwo-1">
+                            <div id="flush-collapseTwo-1" className="accordion-collapse-1 collapse link-box" aria-labelledby="flush-headingTwo-1" data-bs-parent="#accordionFlushExample">
                                 <div className="accordion-body">
                                 <a href="#">Documents</a>
                                 </div>
                             </div>
-                            <div id="flush-collapseTwo-1" className="accordion-collapse-1 collapse link-box" aria-labelledby="flush-headingTwo-1">
+                            <div id="flush-collapseTwo-1" className="accordion-collapse-1 collapse link-box" aria-labelledby="flush-headingTwo-1" data-bs-parent="#accordionFlushExample">
                                 <div className="accordion-body">
                                 <a href="#">Videos</a>
                                 </div>
@@ -110,12 +104,12 @@ return (
                                 Enterprise
                             </a>
                             </h2>
-                            <div id="flush-collapseThree-1" className="accordion-collapse-1 collapse link-box" aria-labelledby="flush-headingThree-1">
+                            <div id="flush-collapseThree-1" className="accordion-collapse-1 collapse link-box" aria-labelledby="flush-headingThree-1" data-bs-parent="#accordionFlushExample">
                                 <div className="accordion-body">
                                 <a href="#">Documents</a>
                                 </div>
                             </div>
-                            <div id="flush-collapseThree-1" className="accordion-collapse-1 collapse link-box" aria-labelledby="flush-headingThree-1">
+                            <div id="flush-collapseThree-1" className="accordion-collapse-1 collapse link-box" aria-labelledby="flush-headingThree-1" data-bs-parent="#accordionFlushExample">
                                 <div className="accordion-body">
                                 <a href="#">Videos</a>
                                 </div>
@@ -123,13 +117,6 @@ return (
                         </div>
                     </div>
                 </div>
-                </div>
-            <AccordionTwoComponent/>
-            <AccordionThreeComponent/>
-            <AccordionFourComponent/>
-        </div>
-        <AccordionFooterComponent/>
-        <ToolBoxSectionComponent/>
     </div>
 );
 }

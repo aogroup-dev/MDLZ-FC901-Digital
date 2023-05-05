@@ -69,9 +69,9 @@ var HelloWorld = /** @class */ (function (_super) {
                             .filter("News_x0020_Type eq 'Allocations' and (Created gt '2022-01-01' and Created lt '2023-01-01')")()];
                     case 1:
                         list = _a.sent();
-                        list.forEach(function (el) {
-                            console.log(el);
-                        });
+                        // list.forEach(el => {
+                        //   console.log(el);
+                        // });
                         console.log("Count ", list.length);
                         return [2 /*return*/];
                 }

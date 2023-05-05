@@ -1,18 +1,24 @@
 import * as React from 'react';
-import img from '../assets/people.jpg';
+// import img from '../assets/people.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import '../components/AccordionComponent.scss'
 
+interface IAccordionFour{
+    image: string;
+    title: string;
+    colour: string;
+}
 
-function AccordionFourComponent(){
+
+function AccordionFourComponent(props: IAccordionFour){
 
     return (
         <div className="col col-md-6 col-lg-3 box">
-        <img className="img-fluid" src={img} alt=""/>
+        <img className="img-fluid" src={props.image} alt=""/>
         <div className="accordion-box-4">
-            <div className="people-heading">
-                <h5 className='headings text-uppercase'>PEOPLE</h5>
+            <div className="people-heading" style={{backgroundColor: props.colour}}>
+                <h5 className='headings text-uppercase'>{props.title}</h5>
             </div>
             <div className="accordion accordion-flush" id="accordionFlushExample-4">
                 <div className="accordion-item">
@@ -21,7 +27,7 @@ function AccordionFourComponent(){
                         Meet the Digital Team
                     </a>
                     </h2>
-                    <div id="flush-collapseOne-4" className="accordion-collapse-4 collapse link-box" aria-labelledby="flush-headingOne-4">
+                    <div id="flush-collapseOne-4" className="accordion-collapse-4 collapse link-box" aria-labelledby="flush-headingOne-4" data-bs-parent="#accordionFlushExample-4">
                         <div className="accordion-body">
                             <a href="#">Digital R&D Centre of Excellence &#40;CoE&#41;</a>
                         </div>
@@ -33,12 +39,12 @@ function AccordionFourComponent(){
                         Meet the Digital Network
                     </a>
                     </h2>
-                    <div id="flush-collapseTwo-4" className="accordion-collapse-4 collapse link-box" aria-labelledby="flush-headingTwo-4">
+                    <div id="flush-collapseTwo-4" className="accordion-collapse-4 collapse link-box" aria-labelledby="flush-headingTwo-4" data-bs-parent="#accordionFlushExample-4">
                         <div className="accordion-body">
                             <a href="#">Digital Leads</a>
                         </div>
                     </div>
-                    <div id="flush-collapseTwo-4" className="accordion-collapse-4 collapse link-box" aria-labelledby="flush-headingTwo-4">
+                    <div id="flush-collapseTwo-4" className="accordion-collapse-4 collapse link-box" aria-labelledby="flush-headingTwo-4" data-bs-parent="#accordionFlushExample-4">
                         <div className="accordion-body">
                             <a href="#">Digital Tech Centre Champions</a>
                         </div>
@@ -50,17 +56,17 @@ function AccordionFourComponent(){
                         Category & Functional Key Contacts
                     </a>
                     </h2>
-                    <div id="flush-collapseThree-4" className="accordion-collapse-4 collapse link-box" aria-labelledby="flush-headingThree-4">
+                    <div id="flush-collapseThree-4" className="accordion-collapse-4 collapse link-box" aria-labelledby="flush-headingThree-4" data-bs-parent="#accordionFlushExample-4">
                         <div className="accordion-body">
                             <a href="#">Category </a>
                         </div>
                     </div>
-                    <div id="flush-collapseThree-4" className="accordion-collapse-4 collapse link-box" aria-labelledby="flush-headingThree-4">
+                    <div id="flush-collapseThree-4" className="accordion-collapse-4 collapse link-box" aria-labelledby="flush-headingThree-4" data-bs-parent="#accordionFlushExample-4">
                         <div className="accordion-body">
                             <a href="#">Function</a>
                         </div>
                     </div>
-                    <div id="flush-collapseThree-4" className="accordion-collapse-4 collapse link-box" aria-labelledby="flush-headingThree-4">
+                    <div id="flush-collapseThree-4" className="accordion-collapse-4 collapse link-box" aria-labelledby="flush-headingThree-4" data-bs-parent="#accordionFlushExample-4">
                         <div className="accordion-body">
                             <a href="#">Sub Function</a>
                         </div>

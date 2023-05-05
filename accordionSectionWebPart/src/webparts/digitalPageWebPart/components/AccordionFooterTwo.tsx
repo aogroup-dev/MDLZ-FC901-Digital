@@ -21,12 +21,12 @@ function AccordionFooterTwoComponent(){
                                     Digital R&D
                                 </a>
                                 </h2>
-                                <div id="flush-collapseOne-6" className="career-accordion-collapse collapse link-box" aria-labelledby="flush-headingOne-6">
+                                <div id="flush-collapseOne-6" className="career-accordion-collapse collapse link-box" aria-labelledby="flush-headingOne-6" data-bs-parent="#accordionFlushExample-6">
                                     <div className="accordion-body">
                                         <a href="#">Learning Menu</a>
                                     </div>
                                 </div>
-                                <div id="flush-collapseOne-6" className="career-accordion-collapse collapse link-box" aria-labelledby="flush-headingOne-6">
+                                <div id="flush-collapseOne-6" className="career-accordion-collapse collapse link-box" aria-labelledby="flush-headingOne-6" data-bs-parent="#accordionFlushExample-6">
                                     <div className="accordion-body">
                                         <a href="#">Roadmap</a>
                                     </div>
@@ -38,7 +38,7 @@ function AccordionFooterTwoComponent(){
                                     R&D Resources
                                 </a>
                                 </h2>
-                                <div id="flush-collapseTwo-6" className="career-accordion-collapse collapse link-box" aria-labelledby="flush-headingTwo-6">
+                                <div id="flush-collapseTwo-6" className="career-accordion-collapse collapse link-box" aria-labelledby="flush-headingTwo-6" data-bs-parent="#accordionFlushExample-6">
                                     <div className="accordion-body">
                                     <a href="#">R&D Academy</a>
                                     </div>
@@ -50,12 +50,12 @@ function AccordionFooterTwoComponent(){
                                     Enterprise Resources
                                 </a>
                                 </h2>
-                                <div id="flush-collapseThree-6" className="career-accordion-collapse collapse link-box" aria-labelledby="flush-headingThree-6">
+                                <div id="flush-collapseThree-6" className="career-accordion-collapse collapse link-box" aria-labelledby="flush-headingThree-6" data-bs-parent="#accordionFlushExample-6">
                                     <div className="accordion-body">
                                         <a href="#">Grow Everyday</a>
                                     </div>
                                 </div>
-                                <div id="flush-collapseThree-6" className="career-accordion-collapse collapse link-box" aria-labelledby="flush-headingThree-6">
+                                <div id="flush-collapseThree-6" className="career-accordion-collapse collapse link-box" aria-labelledby="flush-headingThree-6" data-bs-parent="#accordionFlushExample-6">
                                     <div className="accordion-body">
                                         <a href="#">Career Launchpad</a>
                                     </div>
