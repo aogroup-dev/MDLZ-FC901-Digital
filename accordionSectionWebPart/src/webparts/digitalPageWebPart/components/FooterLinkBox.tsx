@@ -1,5 +1,4 @@
 import * as React from 'react';
-// import img from '../assets/links.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import '../components/AccordionComponent.scss';
@@ -17,24 +16,19 @@ interface IFooterLinkBox{
 function FooterLinkBoxComponent(props: IFooterLinkBox) {
 
     
+    const colorToButtonClassMap : {[key: string]: string} = {
+        "#287819": "buttonGreen",
+        "#2d6eaa": "buttonBlue",
+        "#e6af23": "buttonYellow",
+        "#a52323": "buttonRed",
+        "#623e24": "buttonBrown",
+        "#724d8d": "buttonPurple",
+        "#666666": "buttonGrey",
+        "#e18719": "buttonOrange",
+    };
+
     function colourChecker(colour: string) : string{
-        if (colour === '#287819'){
-            return 'buttonGreen';
-        }else if (colour === '#2d6eaa'){
-            return 'buttonBlue';
-        }else if (colour === '#e6af23'){
-            return 'buttonYellow';
-        }else if (colour === '#a52323'){
-            return 'buttonRed';
-        }else if (colour === '#623e24'){
-            return 'buttonBrown';
-        }else if (colour === '#724d8d'){
-            return 'buttonPurple';
-        }else if (colour === '#666666'){
-            return 'buttonGrey';
-        }else if (colour === '#e18719'){
-            return 'buttonOrange';
-        }
+        return colorToButtonClassMap[colour] || '';
     }
 
     return (
@@ -49,11 +43,7 @@ function FooterLinkBoxComponent(props: IFooterLinkBox) {
             </div>
             {props.link1 ? props.link1.split(/\r\n|\r|\n/g).map((item, index, arr) => { return (
             <div className="e-links">
-                {index == arr.length -1 ? <a className='bottom-link text-nowrap' href={props.linkHref1.split(/\r\n|\r|\n/g).pop() || "#"} key={item}>{item}</a> : <a className='link' href={props.linkHref1.split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>}
-                {/* <a href="#" className="link">Wiki / FAQs &gt;</a>
-                <a href="#" className="link">Material Properties Database &gt;</a>
-                <a href="#" className="link">MATILDA &gt;</a>                            
-                <a href="#" className="bottom-link text-nowrap">Digital BGCM SharePoint&gt;</a> */}
+                {index == arr.length -1 ? <a target='_blank' className='bottom-link text-nowrap' href={props.linkHref1.split(/\r\n|\r|\n/g).pop() || "#"} key={item}>{item}</a> : <a target='_blank' className='link' href={props.linkHref1.split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>}
                 <div className="img-pic">
                     {/* <img src={img} alt="" className="img-fluid picture"/> */}
                 </div>
@@ -75,11 +65,7 @@ function FooterLinkBoxComponent(props: IFooterLinkBox) {
                 <div className="img-pic">
                     {/* <img src={img} alt="" className="img-fluid picture"/> */}
                 </div>
-                {index == arr.length -1 ? <a className='bottom-link text-nowrap' href={props.linkHref1.split(/\r\n|\r|\n/g).pop() || "#"} key={item}>{item}</a> : <a className='link' href={props.linkHref1.split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>}
-                {/* <a href="#" className="link">Wiki / FAQs &gt;</a>
-                <a href="#" className="link">Material Properties Database &gt;</a>
-                <a href="#" className="link">MATILDA &gt;</a>                            
-                <a href="#" className="bottom-link text-nowrap">Digital BGCM SharePoint&gt;</a> */}
+                {index == arr.length -1 ? <a target='_blank' className='bottom-link text-nowrap' href={props.linkHref1.split(/\r\n|\r|\n/g).pop() || "#"} key={item}>{item}</a> : <a target='_blank' className='link' href={props.linkHref1.split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>}
             </div>
             )}): null}
         </div>

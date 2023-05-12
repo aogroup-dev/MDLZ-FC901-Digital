@@ -383,11 +383,11 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
       pages: [
         {
           header: {
-            description: 'Accordion Section box 1'
+            description: 'Accordion Section'
           },
           groups: [
             {
-              groupName: 'box 1',
+              groupName: 'Accordion One',
               groupFields: [
                 PropertyPaneTextField('image1', {
                   label: 'image link'
@@ -401,11 +401,11 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
                   offText: 'Bottom'
                 }),
                 PropertyPaneTextField('boxOnesubHeading1',{
-                  label: 'sub headings',
+                  label: 'sub headings (Press Enter to separate content)',
                   multiline: true,
                 }),
                 PropertyPaneDropdown('colour1', {
-                  label: 'heading colour',
+                  label: 'Accordion Colour',
                   options: [
                     {key: '#287819', text: 'green'},
                     {key: '#2d6eaa', text: 'blue'},
@@ -420,43 +420,43 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
                 }),
 
                 PropertyPaneTextField('boxOneLink1', {
-                  label: 'link 1 ',
+                  label: 'link text 1 ',
                   multiline: true,
                 }),
                 PropertyPaneTextField('boxOneHref1', {
-                  label: 'Href 1 ',
+                  label: 'link 1 ',
                   multiline: true
                 }),
                 PropertyPaneTextField('boxOneLink2', {
-                  label: 'link 2 ',
+                  label: 'link text 2 ',
                   multiline: true
                 }),
                 PropertyPaneTextField('boxOneHref2', {
-                  label: 'Href 2 ',
+                  label: 'link 2 ',
                   multiline: true
                 }),
                 PropertyPaneTextField('boxOneLink3', {
-                  label: 'link 3 '
+                  label: 'link text 3 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxOneHref3', {
-                  label: 'Href 3 '
+                  label: 'link 3 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxOneLink4', {
-                  label: 'link 4 '
+                  label: 'link text 4 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxOneHref4', {
-                  label: 'Href 4 '
+                  label: 'link 4 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxOneLink5', {
-                  label: 'link 5 '
+                  label: 'link text 5 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxOneHref5', {
-                  label: 'Href 5 '
+                  label: 'link 5 '
                   ,multiline: true
                 }),
                 
@@ -468,11 +468,11 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
         },
         {
           header: {
-            description: 'Accordion Box 2'
+            description: 'Accordion Section'
           },
           groups: [
             {
-              groupName: 'box 2',
+              groupName: 'Accordion Two',
               groupFields: [
                 PropertyPaneTextField('image2', {
                   label: 'image link'
@@ -486,18 +486,18 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
                   offText: 'Bottom'
                 }),
                 PropertyPaneTextField('subHeading',{
-                  label: 'sub heading',
+                  label: 'sub headings (Press Enter to separate content)',
                   multiline: true,
                 }),
                 PropertyPaneTextField('subHeadingLink',{
-                  label: 'sub heading Link (href for project Managment & Tracking)',
+                  label: 'sub heading Link (link for project Managment & Tracking)',
                   
                 }),
                 // PropertyPaneTextField('boxTwosubHeading3',{
                 //   label: 'sub heading 3'
                 // }),
                 PropertyPaneDropdown('colour2', {
-                  label: 'heading colour',
+                  label: 'Accordion colour',
                   options: [
                     {key: '#287819', text: 'green'},
                     {key: '#2d6eaa', text: 'blue'},
@@ -511,35 +511,35 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
                   // selectedKey: 'colour1',
                 }),
                 PropertyPaneTextField('boxTwoLink1', {
-                  label: 'link 1 '
+                  label: 'link text 1 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxTwoHref1', {
-                  label: 'Href 1 '
+                  label: 'link 1 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxTwoLink2', {
-                  label: 'link 2 '
+                  label: 'link text 2 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxTwoHref2', {
-                  label: 'Href 2 '
+                  label: 'link 2 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxTwoLink3', {
-                  label: 'link 3 '
+                  label: 'link text 3 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxTwoHref3', {
-                  label: 'Href 3 '
+                  label: 'link 3 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxTwoLink4', {
-                  label: 'link 4 '
+                  label: 'link text 4 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxTwoHref4', {
-                  label: 'Href 4 '
+                  label: 'link 4 '
                   ,multiline: true
                 }),
 
@@ -553,11 +553,11 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
         },
         {
           header: {
-            description: 'Accordion Box 3'
+            description: 'Accordion Section'
           },
           groups: [
             {
-              groupName: 'box 3',
+              groupName: 'Accordion Three',
               groupFields: [
                 PropertyPaneTextField('image3', {
                   label: 'image link'
@@ -571,11 +571,11 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
                   offText: 'Bottom'
                 }),
                 PropertyPaneTextField('boxThreesubHeading1',{
-                  label: 'sub headings',
+                  label: 'sub headings (Press Enter to separate content)',
                   multiline: true
                 }),
                 PropertyPaneDropdown('colour3', {
-                  label: 'heading colour',
+                  label: 'Accordion colour',
                   options: [
                     {key: '#287819', text: 'green'},
                     {key: '#2d6eaa', text: 'blue'},
@@ -589,43 +589,43 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
                   // selectedKey: 'colour1',
                 }),
                 PropertyPaneTextField('boxThreeLink1', {
-                  label: 'link 1 '
+                  label: 'link text 1 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxThreeHref1', {
-                  label: 'Href 1 '
+                  label: 'link 1 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxThreeLink2', {
-                  label: 'link 2 '
+                  label: 'link text 2 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxThreeHref2', {
-                  label: 'Href 2 '
+                  label: 'link 2 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxThreeLink3', {
-                  label: 'link 3 '
+                  label: 'link text 3 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxThreeHref3', {
-                  label: 'Href 3 '
+                  label: 'link 3 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxThreeLink4', {
-                  label: 'link 4 '
+                  label: 'link text 4 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxThreeHref4', {
-                  label: 'Href 4 '
+                  label: 'link 4 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxThreeLink5', {
-                  label: 'link 5 '
+                  label: 'link text 5 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxThreeHref5', {
-                  label: 'Href 5 '
+                  label: 'link 5 '
                   ,multiline: true
                 }),
               
@@ -636,11 +636,11 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
         },
         {
           header: {
-            description: 'Accordion Box 4'
+            description: 'Accordion Section'
           },
           groups: [
             {
-              groupName: 'box 4',
+              groupName: 'Accordion Four',
               groupFields: [
                 PropertyPaneTextField('image4', {
                   label: 'image link'
@@ -654,7 +654,7 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
                   offText: 'Bottom'
                 }),
                 PropertyPaneTextField('boxFoursubHeading1',{
-                  label: 'sub headings',
+                  label: 'sub headings (Press Enter to separate content)',
                   multiline: true
                 }),
                 // PropertyPaneTextField('boxFoursubHeading2',{
@@ -664,7 +664,7 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
                 //   label: 'sub heading 3'
                 // }),
                 PropertyPaneDropdown('colour4', {
-                  label: 'heading colour',
+                  label: 'Accordion colour',
                   options: [
                     {key: '#287819', text: 'green'},
                     {key: '#2d6eaa', text: 'blue'},
@@ -678,43 +678,43 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
                   // selectedKey: 'colour1',
                 }),
                 PropertyPaneTextField('boxFourLink1', {
-                  label: 'link 1 '
+                  label: 'link text 1 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxFourHref1', {
-                  label: 'Href 1 '
+                  label: 'link 1 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxFourLink2', {
-                  label: 'link 2 '
+                  label: 'link text 2 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxFourHref2', {
-                  label: 'Href 2 '
+                  label: 'link 2 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxFourLink3', {
-                  label: 'link 3 '
+                  label: 'link text 3 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxFourHref3', {
-                  label: 'Href 3 '
+                  label: 'link 3 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxFourLink4', {
-                  label: 'link 4 '
+                  label: 'link text 4 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxFourHref4', {
-                  label: 'Href 4 '
+                  label: 'link 4 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxFourLink5', {
-                  label: 'link 5 '
+                  label: 'link text 5 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxFourHref5', {
-                  label: 'Href 5 '
+                  label: 'link 5 '
                   ,multiline: true
                 }),
                 
@@ -725,11 +725,11 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
         },
         {
           header: {
-            description: 'Footer section box 1'
+            description: 'Footer section Accordion'
           },
           groups: [
             {
-              groupName: 'box 5',
+              groupName: 'Accordion Five',
               groupFields: [
                 PropertyPaneTextField('image5', {
                   label: 'image link'
@@ -743,20 +743,11 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
                   offText: 'Bottom'
                 }),
                 PropertyPaneTextField('boxFivesubHeading1',{
-                  label: 'sub headings',
+                  label: 'sub headings (Press Enter to separate content)',
                   multiline: true
                 }),
-                // PropertyPaneTextField('boxFivesubHeading2',{
-                //   label: 'sub heading 2'
-                // }),
-                // PropertyPaneTextField('boxFivesubHeading3',{
-                //   label: 'sub heading 3'
-                // }),
-                // PropertyPaneTextField('boxFivesubHeading4',{
-                //   label: 'sub heading 4'
-                // }),
                 PropertyPaneDropdown('colour5', {
-                  label: 'heading colour',
+                  label: 'Accordion colour',
                   options: [
                     {key: '#287819', text: 'green'},
                     {key: '#2d6eaa', text: 'blue'},
@@ -771,43 +762,43 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
                   // selectedKey: 'colour1',
                 }),
                 PropertyPaneTextField('boxFiveLink1', {
-                  label: 'link 1 '
+                  label: 'link text 1 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxFiveHref1', {
-                  label: 'Href 1 '
+                  label: 'link 1 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxFiveLink2', {
-                  label: 'link 2 '
+                  label: 'link text 2 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxFiveHref2', {
-                  label: 'Href 2 '
+                  label: 'link 2 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxFiveLink3', {
-                  label: 'link 3 '
+                  label: 'link text 3 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxFiveHref3', {
-                  label: 'Href 3 '
+                  label: 'link 3 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxFiveLink4', {
-                  label: 'link 4 '
+                  label: 'link text 4 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxFiveHref4', {
-                  label: 'Href 4 '
+                  label: 'link 4 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxFiveLink5', {
-                  label: 'link 5 '
+                  label: 'link text 5 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxFiveHref5', {
-                  label: 'Href 5 '
+                  label: 'link 5 '
                   ,multiline: true
                 }),
               
@@ -818,11 +809,11 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
         },
         {
           header: {
-            description: 'Footer section box 2'
+            description: 'Footer section accordion'
           },
           groups: [
             {
-              groupName: 'box 6',
+              groupName: 'Accordion Six',
               groupFields: [
                 PropertyPaneTextField('image6', {
                   label: 'image link'
@@ -836,11 +827,11 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
                   offText: 'Bottom'
                 }),
                 PropertyPaneTextField('boxSixsubHeading1',{
-                  label: 'sub headings',
+                  label: 'sub headings (Press Enter to separate content)',
                   multiline:true
                 }),
                 PropertyPaneDropdown('colour6', {
-                  label: 'heading colour',
+                  label: 'Accordion colour',
                   options: [
                     {key: '#287819', text: 'green'},
                     {key: '#2d6eaa', text: 'blue'},
@@ -855,43 +846,43 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
                   // selectedKey: 'colour1',
                 }),
                 PropertyPaneTextField('boxSixLink1', {
-                  label: 'link 1 '
+                  label: 'link text 1 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxSixHref1', {
-                  label: 'Href 1 '
+                  label: 'link 1 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxSixLink2', {
-                  label: 'link 2 '
+                  label: 'link text 2 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxSixHref2', {
-                  label: 'Href 2 '
+                  label: 'link 2 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxSixLink3', {
-                  label: 'link 3 '
+                  label: 'link text 3 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxSixHref3', {
-                  label: 'Href 3 '
+                  label: 'link 3 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxSixLink4', {
-                  label: 'link 4 '
+                  label: 'link text 4 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxSixHref4', {
-                  label: 'Href 4 '
+                  label: 'link 4 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxSixLink5', {
-                  label: 'link 5 '
+                  label: 'link text 5 '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxSixHref5', {
-                  label: 'Href 5 '
+                  label: 'link 5 '
                   ,multiline: true
                 }),
               
@@ -903,11 +894,11 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
         },
         {
           header: {
-            description: 'footer Section box 3'
+            description: 'Links box section'
           },
           groups: [
             {
-              groupName: 'box 7',
+              groupName: 'links box one',
               groupFields: [
                 PropertyPaneTextField('image7', {
                   label: 'image link'
@@ -921,7 +912,7 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
                   offText: 'Bottom'
                 }),
                 PropertyPaneDropdown('colour7', {
-                  label: 'heading colour',
+                  label: 'box colour',
                   options: [
                     {key: '#287819', text: 'green'},
                     {key: '#2d6eaa', text: 'blue'},
@@ -936,11 +927,11 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
                   // selectedKey: 'colour1',
                 }),
                 PropertyPaneTextField('boxSevenLink1', {
-                  label: 'link 1 '
+                  label: 'links text (Press Enter to separate content)'
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxSevenHref1', {
-                  label: 'Href 1 '
+                  label: 'links (Press Enter to separate content)'
                   ,multiline: true
                 }),
               
@@ -950,11 +941,11 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
         },
         {
           header: {
-            description: 'footer section box 4'
+            description: 'footer section links'
           },
           groups: [
             {
-              groupName: 'box 8',
+              groupName: 'links box Two',
               groupFields: [
                 PropertyPaneTextField('image8', {
                   label: 'image link'
@@ -968,7 +959,7 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
                   offText: 'Bottom'
                 }),
                 PropertyPaneDropdown('colour8', {
-                  label: 'heading colour',
+                  label: 'colour',
                   options: [
                     {key: '#287819', text: 'green'},
                     {key: '#2d6eaa', text: 'blue'},
@@ -983,11 +974,11 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
                   // selectedKey: 'colour1',
                 }),
                 PropertyPaneTextField('boxEightLink1', {
-                  label: 'link 1 '
+                  label: 'links text (Press Enter to separate content) '
                   ,multiline: true
                 }),
                 PropertyPaneTextField('boxEightHref1', {
-                  label: 'Href 1 '
+                  label: 'links (Press Enter to separate content)'
                   ,multiline: true
                 }),
               

@@ -1,5 +1,4 @@
 import * as React from 'react';
-// import img from '../assets/workstreams.jpg';
 import '../components/AccordionComponent.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -29,55 +28,32 @@ interface IAccordionThree{
 
 function AccordionThreeComponent(props: IAccordionThree){
 
+    const colorToButtonClassMap : {[key: string]: string} = {
+        "#287819": "buttonGreen",
+        "#2d6eaa": "buttonBlue",
+        "#e6af23": "buttonYellow",
+        "#a52323": "buttonRed",
+        "#623e24": "buttonBrown",
+        "#724d8d": "buttonPurple",
+        "#666666": "buttonGrey",
+        "#e18719": "buttonOrange",
+    };
+
     function colourChecker(colour: string) : string{
-        if (colour === '#287819'){
-            return 'buttonGreen';
-        }else if (colour === '#2d6eaa'){
-            return 'buttonBlue';
-        }else if (colour === '#e6af23'){
-            return 'buttonYellow';
-        }else if (colour === '#a52323'){
-            return 'buttonRed';
-        }else if (colour === '#623e24'){
-            return 'buttonBrown';
-        }else if (colour === '#724d8d'){
-            return 'buttonPurple';
-        }else if (colour === '#666666'){
-            return 'buttonGrey';
-        }else if (colour === '#e18719'){
-            return 'buttonOrange';
-        }
+        return colorToButtonClassMap[colour] || '';
     }
 
-    function checkLinkHrefIndex(index: number): string{
-        if (index == 0){
-            return props.href1;
-        }else if (index == 1){
-            return props.href2;
-        }else if (index == 2){
-            return props.href3;
-        }else if (index == 3){
-            return props.href4;
-        }else if (index == 4){
-            return props.href5;
-        }
 
+    function checkLinkHrefIndex(index: number): string {
+        const hrefs: string[] = [props.href1, props.href2, props.href3, props.href4, props.href5];
+        return hrefs[index] || '';
     }
 
     function checkLinkIndex(index: number): string {
-        if (index == 0){
-            return props.link1;
-        }else if (index == 1){
-            return props.link2;
-        }else if (index == 2){
-            return props.link3;
-        }else if (index == 3){
-            return props.link4;
-        }
-        else if (index == 4){
-            return props.link5;
-        }
-        }
+        const links: string[] = [props.link1, props.link2, props.link3, props.link4, props.link5];
+        return links[index] || '';
+    }
+
 
     return (
         <div className="col-12 col-md-6 col-lg-3 box">
@@ -105,75 +81,14 @@ function AccordionThreeComponent(props: IAccordionThree){
                 {checkLinkIndex(indexMain) ? checkLinkIndex(indexMain).split(/\r\n|\r|\n/g).map((item, index) => {return (
                     <div id={`flush-collapseThree-${indexMain}`} className={`accordion-collapse${colourChecker(props.colour)}-3 collapse link-box`} aria-labelledby={`flush-headingThree-${indexMain}`} data-bs-parent="#accordionFlushExample-3">
                     <div className="accordion-body">
-                    <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>
+                    <a target='_blank' href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>
                     </div>
                     </div>
                     );}) : null}
-                {/* <div id="flush-collapseOne-3" className="accordion-collapse-3 collapse link-box" aria-labelledby="flush-headingOne-3" data-bs-parent="#accordionFlushExample-3">
-                    <div className="accordion-body">
-                        <a href="#">Overview</a>
-                    </div>
-                </div> */}
+
             </div>
                 )}): null}
 
-                {/* <div className="accordion-item">
-                    <h2 className="accordion-header" id="flush-headingTwo-3">
-                    <a className="buttons focus button-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo-3" aria-expanded="false" aria-controls="flush-collapseTwo-3">
-                        {props.subHeading2}
-                    </a>
-                    </h2>
-                    {props.link2 ? props.link2.split(/\r\n|\r|\n/g).map((item, index) => {return (
-                        <div id="flush-collapseTwo-3" className="accordion-collapse-3 collapse link-box" aria-labelledby="flush-headingTwo-3" data-bs-parent="#accordionFlushExample-3">
-                        <div className="accordion-body">
-                        <a href={props.href2.split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>
-                        </div>
-                        </div>
-                        );}) : null} */}
-                    {/* <div id="flush-collapseTwo-3" className="accordion-collapse-3 collapse link-box" aria-labelledby="flush-headingTwo-3" data-bs-parent="#accordionFlushExample-3">
-                        <div className="accordion-body">
-                            <a href="#">Overview</a>
-                        </div>
-                    </div> */}
-                {/* </div> */}
-                {/* <div className="accordion-item">
-                    <h2 className="accordion-header" id="flush-headingThree-3">
-                    <a className="buttons focus button-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree-3" aria-expanded="false" aria-controls="flush-collapseThree-3">
-                        {props.subHeading3}
-                    </a>
-                    </h2>
-                    {props.link3 ? props.link3.split(/\r\n|\r|\n/g).map((item, index) => {return (
-                        <div id="flush-collapseThree-3" className="accordion-collapse-3 collapse link-box" aria-labelledby="flush-headingThree-3" data-bs-parent="#accordionFlushExample-3">
-                        <div className="accordion-body">
-                        <a href={props.href3.split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>
-                        </div>
-                        </div>
-                        );}) : null} */}
-                    {/* <div id="flush-collapseThree-3" className="accordion-collapse-3 collapse link-box" aria-labelledby="flush-headingThree-3" data-bs-parent="#accordionFlushExample-3">
-                        <div className="accordion-body">
-                            <a href="#">Overview</a>
-                        </div>
-                    </div> */}
-                {/* </div> */}
-                {/* <div className="accordion-item">
-                    <h2 className="accordion-header" id="flush-headingFour-3">
-                        <a className="buttons focus button-3 last-button-2 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour-3" aria-expanded="false" aria-controls="flush-collapseFour-3">
-                            {props.subHeading4}
-                        </a>
-                    </h2>
-                    {props.link2 ? props.link2.split(/\r\n|\r|\n/g).map((item, index) => {return (
-                        <div id="flush-collapseFour-3" className="accordion-collapse-3 collapse link-box" aria-labelledby="flush-headingFour-3" data-bs-parent="#accordionFlushExample-3">
-                        <div className="accordion-body">
-                        <a href={props.href2.split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>
-                        </div>
-                        </div>
-                        );}) : null} */}
-                    {/* <div className="accordion-collapse-3 collapse link-box" id="flush-collapseFour-3" aria-labelledby="flush-headingFour-3" data-bs-parent="#accordionFlushExample-3">
-                        <div className="accordion-body">
-                            <a href="#">Overview</a>
-                        </div>
-                    </div> */}
-                {/* </div> */}
             </div>
         </div>
         </div>}
@@ -200,75 +115,13 @@ function AccordionThreeComponent(props: IAccordionThree){
                 {checkLinkIndex(indexMain) ? checkLinkIndex(indexMain).split(/\r\n|\r|\n/g).map((item, index) => {return (
                     <div id={`flush-collapseThree-${indexMain}`} className={`accordion-collapse${colourChecker(props.colour)}-3 collapse link-box`} aria-labelledby={`flush-headingThree-${indexMain}`} data-bs-parent="#accordionFlushExample-3">
                     <div className="accordion-body">
-                    <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>
+                    <a target='_blank' href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>
                     </div>
                     </div>
                     );}) : null}
-                {/* <div id="flush-collapseOne-3" className="accordion-collapse-3 collapse link-box" aria-labelledby="flush-headingOne-3" data-bs-parent="#accordionFlushExample-3">
-                    <div className="accordion-body">
-                        <a href="#">Overview</a>
-                    </div>
-                </div> */}
+
             </div>
                 )}): null}
-                {/* <div className="accordion-item">
-                    <h2 className="accordion-header" id="flush-headingTwo-3">
-                    <a className="buttons focus button-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo-3" aria-expanded="false" aria-controls="flush-collapseTwo-3">
-                        {props.subHeading2}
-                    </a>
-                    </h2>
-                    {props.link2 ? props.link2.split(/\r\n|\r|\n/g).map((item, index) => {return (
-                        <div id="flush-collapseTwo-3" className="accordion-collapse-3 collapse link-box" aria-labelledby="flush-headingTwo-3" data-bs-parent="#accordionFlushExample-3">
-                        <div className="accordion-body">
-                        <a href={props.href2.split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>
-                        </div>
-                        </div>
-                        );}) : null} */}
-                    {/* <div id="flush-collapseTwo-3" className="accordion-collapse-3 collapse link-box" aria-labelledby="flush-headingTwo-3" data-bs-parent="#accordionFlushExample-3">
-                        <div className="accordion-body">
-                            <a href="#">Overview</a>
-                        </div>
-                    </div> */}
-                {/* </div> */}
-
-                {/* <div className="accordion-item">
-                    <h2 className="accordion-header" id="flush-headingThree-3">
-                    <a className="buttons focus button-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree-3" aria-expanded="false" aria-controls="flush-collapseThree-3">
-                       {props.subHeading3}
-                    </a>
-                    </h2>
-                    {props.link3 ? props.link3.split(/\r\n|\r|\n/g).map((item, index) => {return (
-                        <div id="flush-collapseThree-3" className="accordion-collapse-3 collapse link-box" aria-labelledby="flush-headingThree-3" data-bs-parent="#accordionFlushExample-3">
-                        <div className="accordion-body">
-                        <a href={props.href3.split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>
-                        </div>
-                        </div>
-                        );}) : null} */}
-                    {/* <div id="flush-collapseThree-3" className="accordion-collapse-3 collapse link-box" aria-labelledby="flush-headingThree-3" data-bs-parent="#accordionFlushExample-3">
-                        <div className="accordion-body">
-                            <a href="#">Overview</a>
-                        </div>
-                    </div> */}
-                {/* </div> */}
-                {/* <div className="accordion-item">
-                    <h2 className="accordion-header" id="flush-headingFour-3">
-                        <a className="buttons focus button-3 last-button-2 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour-3" aria-expanded="false" aria-controls="flush-collapseFour-3">
-                            {props.subHeading4}
-                        </a>
-                    </h2>
-                    {props.link2 ? props.link2.split(/\r\n|\r|\n/g).map((item, index) => {return (
-                        <div id="flush-collapseFour-3" className="accordion-collapse-3 collapse link-box" aria-labelledby="flush-headingFour-3" data-bs-parent="#accordionFlushExample-3">
-                        <div className="accordion-body">
-                        <a href={props.href2.split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>
-                        </div>
-                        </div>
-                        );}) : null} */}
-                    {/* <div className="accordion-collapse-3 collapse link-box" id="flush-collapseFour-3" aria-labelledby="flush-headingFour-3" data-bs-parent="#accordionFlushExample-3">
-                        <div className="accordion-body">
-                            <a href="#">Overview</a>
-                        </div>
-                    </div> */}
-                {/* </div> */}
 
             </div>
         </div>
