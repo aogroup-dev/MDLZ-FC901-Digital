@@ -81,7 +81,7 @@ return (
                         
                         <div className="accordion-body">
                         
-                        <a target='_blank' href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex] || "#"} key={linkItem}>{linkItem}</a>
+                        <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex] || "#57479d2e-f06d-445f-8150-c7c3e0a7b318"} key={linkItem}>{linkItem}</a>
                         
                         </div>
                         
@@ -122,7 +122,7 @@ return (
                         
                         <div className="accordion-body">
                         
-                        <a target='_blank' href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex] || "#"} key={linkItem}>{linkItem}</a>
+                        <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex] || "#57479d2e-f06d-445f-8150-c7c3e0a7b318"} key={linkItem}>{linkItem}</a>
                         
                         </div>
                         
@@ -134,7 +134,9 @@ return (
                     )}): null}
 
                     </div>
+                    <div>
                     <img className="img-fluid" src={props.image} alt=""/>
+                    </div>
                 </div>}
             </div> }
     </div>

@@ -78,7 +78,7 @@ function AccordionFourComponent(props: IAccordionFour){
                 {checkLinkIndex(indexMain) ? checkLinkIndex(indexMain).split(/\r\n|\r|\n/g).map((item, index) => {return (
                     <div id={`flush-collapseFour-${indexMain}`} className={`accordion-collapse${colourChecker(props.colour)}-4 collapse link-box`} aria-labelledby={`flush-headingFour-${indexMain}`} data-bs-parent="#accordionFlushExample-4">
                     <div className="accordion-body">
-                    <a  target='_blank' href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>
+                    <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index] || "#57479d2e-f06d-445f-8150-c7c3e0a7b318"} key={item}>{item}</a>
                     </div>
                     </div>
                     );}) : null}
@@ -112,7 +112,7 @@ function AccordionFourComponent(props: IAccordionFour){
                 {checkLinkIndex(indexMain) ? checkLinkIndex(indexMain).split(/\r\n|\r|\n/g).map((item, index) => {return (
                     <div id={`flush-collapseFour-${indexMain}`} className={`accordion-collapse${colourChecker(props.colour)}-4 collapse link-box`} aria-labelledby={`flush-headingFour-${indexMain}`} data-bs-parent="#accordionFlushExample-4">
                     <div className="accordion-body">
-                    <a target='_blank' href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>
+                    <a target='_blank' rel="noreferrer" href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>
                     </div>
                     </div>
                     );}) : null}

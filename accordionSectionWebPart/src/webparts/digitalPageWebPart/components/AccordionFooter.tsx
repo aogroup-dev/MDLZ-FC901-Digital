@@ -78,7 +78,7 @@ function AccordionFooterComponent(props: IAccordionFooter) {
                 <div id={`flush-collapse${indexMain}`} className={`news-accordion-collapse${colourChecker(props.colour)} collapse link-box`} aria-labelledby={`flush-heading${indexMain}`} data-bs-parent="#accordionFlushExample-5">
                 <div className="accordion-body">
 
-                <a target='_blank' href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex] || "#"} key={linkItem}>{linkItem}</a>
+                <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex] || "#57479d2e-f06d-445f-8150-c7c3e0a7b318"} key={linkItem}>{linkItem}</a>
                 </div>
                 </div>
                 );}) : null}
@@ -109,7 +109,7 @@ function AccordionFooterComponent(props: IAccordionFooter) {
                 <div id={`flush-collapse${indexMain}`} className={`news-accordion-collapse${colourChecker(props.colour)} collapse link-box`} aria-labelledby={`flush-heading${indexMain}`} data-bs-parent="#accordionFlushExample-5">
                 <div className="accordion-body">
 
-                <a target='_blank' href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex] || "#"} key={linkItem}>{linkItem}</a>
+                <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex] || "#57479d2e-f06d-445f-8150-c7c3e0a7b318"} key={linkItem}>{linkItem}</a>
                 </div>
                 </div>
                 );}) : null}

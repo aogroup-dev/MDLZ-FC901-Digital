@@ -9,6 +9,7 @@ interface IAccordionTwo{
     colour: string;
     imagePosition: boolean;
     subHeading: string;
+    // subHeadingNoIcon: string;
     subHeadingLink: string;
     link1: string;
     linkHref1: string;
@@ -18,6 +19,7 @@ interface IAccordionTwo{
     linkHref3: string;
     link4: string;
     linkHref4: string;
+
 }
 
 
@@ -52,13 +54,23 @@ function AccordionTwoComponent(props: IAccordionTwo){
         }
 
     function showSection(){
-        const section = document.getElementById('toolbox');
+        const section = document.getElementById('57479d2e-f06d-445f-8150-c7c3e0a7b318');
         if (section.style.display === "none") {
             section.style.display = "block";
         } else {
             section.style.display = "none";
         }
+        
     }
+
+    // function showSection(){
+    //     const section = document.getElementById('toolbox');
+    //     if (section.style.display === "none") {
+    //         section.style.display = "block";
+    //     } else {
+    //         section.style.display = "none";
+    //     }
+    // }
 
     return (
         <div className="col-12 col-md-6 col-lg-3 box">
@@ -83,7 +95,7 @@ function AccordionTwoComponent(props: IAccordionTwo){
         {checkLinkIndex(indexMain) ? checkLinkIndex(indexMain).split(/\r\n|\r|\n/g).map((item, index) => {return (
             <div id={`flush-collapseTwo-${indexMain}`} className={`accordion-collapse${colourChecker(props.colour)}-1 collapse link-box`} aria-labelledby={`flush-headingTwo-${indexMain}`} data-bs-parent="#accordionFlushExample-2">
             <div className="accordion-body">
-            <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index] || "toolbox"} key={item} onClick={showSection}>{item}</a>
+            <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index] || "#57479d2e-f06d-445f-8150-c7c3e0a7b318"} key={item} onClick={showSection}>{item}</a>
             </div>
             </div>
             );}) : null}
@@ -92,7 +104,7 @@ function AccordionTwoComponent(props: IAccordionTwo){
                 )}): null}
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="flush-headingTwo-2">
-                    <a href={props.subHeadingLink} className={`buttons focus ${colourChecker(props.colour)}-2 accordion-button collapsed no-plus`}>
+                    <a href='#57479d2e-f06d-445f-8150-c7c3e0a7b318' className={`buttons focus ${colourChecker(props.colour)}-2 accordion-button collapsed no-plus`}>
                         Project Management & Tracking
                     </a>
                     </h2>
@@ -123,7 +135,7 @@ function AccordionTwoComponent(props: IAccordionTwo){
         {checkLinkIndex(indexMain) ? checkLinkIndex(indexMain).split(/\r\n|\r|\n/g).map((item, index) => {return (
             <div id={`flush-collapseTwo-${indexMain}`} className={`accordion-collapse${colourChecker(props.colour)}-2 collapse link-box`} aria-labelledby={`flush-headingTwo-${indexMain}`} data-bs-parent="#accordionFlushExample-2">
             <div className="accordion-body">
-            <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index] || "toolbox"} key={item} onClick={showSection}>{item}</a>
+            <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index] || "#57479d2e-f06d-445f-8150-c7c3e0a7b318"} key={item} onClick={showSection}>{item}</a>
             </div>
             </div>
             );}) : null}
@@ -132,7 +144,7 @@ function AccordionTwoComponent(props: IAccordionTwo){
                 )}): null}
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="flush-headingFour-2">
-                    <a  target='_blank' href="#" className={`buttons focus ${colourChecker(props.colour)}-2 accordion-button collapsed no-plus`} type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo-2" aria-expanded="false" aria-controls="flush-collapseTwo-2">
+                    <a href='#57479d2e-f06d-445f-8150-c7c3e0a7b318' className={`buttons focus ${colourChecker(props.colour)}-2 accordion-button collapsed no-plus`}>
                         Project Management & Tracking
                     </a>
                     </h2>

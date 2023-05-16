@@ -167,7 +167,25 @@ export default class DigitalPageWebPart extends React.Component<IDigitalPageWebP
             <FooterLinksComponent image={image7} imagePosition={imageSevenPosition} title={title7} colour={colour7} link1={boxSevenLink1} linkHref1={boxSevenHref1}/>
             <FooterLinkBoxComponent image={image8} imagePosition={imageEightPosition} title={title8} colour={colour8} link1={boxEightLink1} linkHref1={boxEightHref1}/>
           </div>
-          <ToolBoxSectionComponent/>
+        <ToolBoxSectionComponent/>
+        {/* <CKEditor
+                    editor={ ClassicEditor }
+                    data="<p>Hello from CKEditor 5!</p>"
+                    onReady={ (editor: any) => {
+                        // You can store the "editor" and use when it is needed.
+                        console.log( 'Editor is ready to use!', editor );
+                    } }
+                    onChange={ ( event: any, editor: { getData: () => any; } ) => {
+                        const data = editor.getData();
+                        console.log( { event, editor, data } );
+                    } }
+                    onBlur={ ( event: any, editor: any ) => {
+                        console.log( 'Blur.', editor );
+                    } }
+                    onFocus={ ( event: any, editor: any ) => {
+                        console.log( 'Focus.', editor );
+                    } }
+                /> */}
         </div>
       </section>
     );
