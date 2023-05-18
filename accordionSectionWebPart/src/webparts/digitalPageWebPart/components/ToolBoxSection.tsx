@@ -2,52 +2,61 @@ import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import '../components/AccordionComponent.scss';
-// import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-// import { RichText } from "@pnp/spfx-controls-react/lib/RichText";
+// import FileViewer from 'react-file-viewer';
+import DocViewer, { DocViewerRenderers } from "react-doc-viewer";
+
+
+interface IToolBoxSection{
+    selectedLink: string;
+    selectedColour: string;
+}
 
 
 
+function ToolBoxSectionComponent(props: IToolBoxSection) {
 
-function ToolBoxSectionComponent() {
+    const colorToButtonClassMap : {[key: string]: string} = {
+        "#287819": "#72a769",
+        "#2d6eaa": "#81a8cc",
+        "#e6af23": "#edc765",
+        "#a52323": "#c97b7b",
+        "#623e24": "#917861",
+        "#724d8d": "#957aa9",
+        "#666666": "buttonGrey",
+        "#e18719": "buttonOrange",
+    };
 
-    // function getCKeditor(){
-        
-    //     ClassicEditor.create( document.querySelector( '#editor' ) as HTMLElement )
-    //     .then( editor => {
-    //     console.log( editor );
-    //     } )
-    //     .catch( error => {
-    //     console.error( error );
-    //     } );
-    // }
+    function colourChecker(colour: string) : string{
+        return colorToButtonClassMap[colour] || '';
+    }
 
-    
-// const YourComponent: React.FC = () => {
-    // React.useEffect(() => {
-    //   const editorElement = document.getElementById('editor');
-    //   if (editorElement) {
-    //     ClassicEditor.create(editorElement)
-    //       .then((editor) => {
-    //         console.log(editor);
-    //       })
-    //       .catch((error) => {
-    //         console.error(error);
-    //       });
-    //   }
-    // }, []);
+    const docs = [
+        { uri: props.selectedLink }, // Local File
+      ];
+
+   // https://collaboration.mdlz.com/:b:/r/sites/DigitalResearchandDevelopment/Shared%20Documents/purpose/Digital-R-D-Home_Sona%20and%20Nicx%20comments.pdf
+
 
     return (
-        <section id='toolbox' className="toolbox-section" style={{display: 'none'}}>
-            <div className="toolbox-header">
-                <h5 className='text-uppercase text-white text-center headings'>R&D digital toolbox user guide</h5>
-            </div>
-            {/* <RichText value={this.props.value}
-            onChange={(text)=>this.onTextChange(text)}/> */}
-        {/* {getCKeditor} */}
-            {/* <div className="toolbox-header">
-            </div> */}
+        <div>
 
-        </section>
+
+            {props.selectedLink && (
+                <div id='toolbox'>
+                    <div className="toolbox-header" style={{backgroundColor: props.selectedColour}}>
+                        <h5 className='text-uppercase text-white text-center headings'>R&D digital toolbox user guide</h5>
+                    </div>
+
+                    <DocViewer documents={docs} style={{backgroundColor: colourChecker(props.selectedColour)}} className='toolbox-section' pluginRenderers={DocViewerRenderers} config={{
+                        header: {
+                            disableHeader: true,
+    
+                        }
+                    }}/>
+                    </div>
+
+            )}
+        </div>
     );
 
 }

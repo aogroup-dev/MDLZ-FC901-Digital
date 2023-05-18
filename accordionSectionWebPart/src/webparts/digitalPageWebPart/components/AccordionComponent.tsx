@@ -21,6 +21,8 @@ interface IAccordionSection{
     link5: string;
     linkHref5: string;
     imagePosition: boolean;
+    onLinkClick: (link: string, colour: string) => void;
+    // onColourChange: (colour: string) => void;
 }
 
 function AccordionSection(props: IAccordionSection){
@@ -50,6 +52,33 @@ function AccordionSection(props: IAccordionSection){
         return hrefs[index] || '';
     }
 
+    // function showSection(){
+    //     const section = document.getElementById('toolbox');
+    //     if (section.style.display === "none") {
+    //         section.style.display = "block";
+    //     } else {
+    //         section.style.display = "none";
+    //     }
+        
+    // }
+
+    const handleLinkClick = (link: string, colour: string) => {
+        props.onLinkClick(link, colour);
+    }
+    
+
+    // const handleColourChange = (colour: string) => {
+    //     props.onColourChange(colour);
+    // }
+
+    // function getLink(link: string) : string{
+    //     return link;
+    // }
+
+    
+
+    
+    // let link: string = '';
 
 return (
     
@@ -81,11 +110,12 @@ return (
                         
                         <div className="accordion-body">
                         
-                        <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex] || "#57479d2e-f06d-445f-8150-c7c3e0a7b318"} key={linkItem}>{linkItem}</a>
+                        <a href='#toolbox' onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex], props.colour)} key={linkItem}>{linkItem}</a>
+                        </div>
+
                         
                         </div>
-                        
-                        </div>
+
                         
                         );}) : null}
 
@@ -122,7 +152,7 @@ return (
                         
                         <div className="accordion-body">
                         
-                        <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex] || "#57479d2e-f06d-445f-8150-c7c3e0a7b318"} key={linkItem}>{linkItem}</a>
+                        <a href='#toolbox' onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex], props.colour)} key={linkItem}>{linkItem}</a>
                         
                         </div>
                         

@@ -25,12 +25,14 @@ export interface IDigitalPageWebPartWebPartProps {
   boxOnesubHeading4: string;
   boxOnesubHeading5: string;
 
+
   image2: string;
   title2: string;
   colour2: string;
   imageTwoPosition: boolean;
   subHeading: string;
   subHeadingLink: string;
+  subHeadingNoIcon: string;
   boxTwosubHeading1: string;
   boxTwosubHeading2: string;
   boxTwosubHeading3: string;
@@ -189,6 +191,7 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
         boxTwosubHeading3: this.properties.boxTwosubHeading3,
         boxTwosubHeading4: this.properties.boxTwosubHeading4,
         boxTwosubHeading5: this.properties.boxTwosubHeading5,
+        subHeadingNoIcon: this.properties.subHeadingNoIcon,
 
 
         image3: this.properties.image3,
@@ -459,6 +462,7 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
                   label: 'link 5 '
                   ,multiline: true
                 }),
+
                 
               ]
             },
@@ -489,13 +493,14 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
                   label: 'sub headings (Press Enter to separate content)',
                   multiline: true,
                 }),
+                PropertyPaneTextField('subHeadingNoIcon',{
+                  label: 'sub heading without icon text'
+                }
+                ),
                 PropertyPaneTextField('subHeadingLink',{
-                  label: 'sub heading Link (link for project Managment & Tracking)',
+                  label: 'sub heading without icon Link',
                   
                 }),
-                // PropertyPaneTextField('boxTwosubHeading3',{
-                //   label: 'sub heading 3'
-                // }),
                 PropertyPaneDropdown('colour2', {
                   label: 'Accordion colour',
                   options: [

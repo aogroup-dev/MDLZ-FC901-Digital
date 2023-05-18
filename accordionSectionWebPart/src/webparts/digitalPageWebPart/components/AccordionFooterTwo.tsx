@@ -23,6 +23,7 @@ interface IAccordionFooterTwo{
     linkHref4: string
     link5: string;
     linkHref5: string
+    onLinkClick: (link: string, colour: string) => void;
 }
 
 function AccordionFooterTwoComponent(props: IAccordionFooterTwo){
@@ -52,6 +53,10 @@ function AccordionFooterTwoComponent(props: IAccordionFooterTwo){
         return hrefs[index] || '';
     }
 
+    const handleLinkClick = (link: string, colour: string) => {
+        props.onLinkClick(link, colour);
+    }
+
 
     return (
         <div className="col-12 col-md-6 col-lg-3 box">
@@ -75,7 +80,7 @@ function AccordionFooterTwoComponent(props: IAccordionFooterTwo){
                             {checkLinkIndex(indexMain) ? checkLinkIndex(indexMain).split(/\r\n|\r|\n/g).map((item, index) => {return (
                             <div id={`flush-collapseSix-${indexMain}`} className={`career-accordion-collapse${colourChecker(props.colour)} collapse link-box`} aria-labelledby={`flush-headingSix-${indexMain}`} data-bs-parent="#accordionFlushExample-6">
                             <div className="accordion-body">
-                            <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index] || "#57479d2e-f06d-445f-8150-c7c3e0a7b318"} key={item}>{item}</a>
+                            <a href='#toolbox' onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index], props.colour)} key={item}>{item}</a>
                             </div>
                             </div>
                             );}) : null}
@@ -105,7 +110,7 @@ function AccordionFooterTwoComponent(props: IAccordionFooterTwo){
                             {checkLinkIndex(indexMain) ? checkLinkIndex(indexMain).split(/\r\n|\r|\n/g).map((item, index) => {return (
                             <div id={`flush-collapseSix-${indexMain}`} className={`career-accordion-collapse${colourChecker(props.colour)} collapse link-box`} aria-labelledby={`flush-headingSix-${indexMain}`} data-bs-parent="#accordionFlushExample-6">
                             <div className="accordion-body">
-                            <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index] || "#57479d2e-f06d-445f-8150-c7c3e0a7b318"} key={item}>{item}</a>
+                            <a href='#toolbox' onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index], props.colour)} key={item}>{item}</a>
                             </div>
                             </div>
                             );}) : null}

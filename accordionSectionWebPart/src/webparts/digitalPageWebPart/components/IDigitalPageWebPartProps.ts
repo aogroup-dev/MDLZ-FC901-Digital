@@ -143,6 +143,7 @@ export interface IDigitalPageWebPartProps {
 
   boxEightLink1: string;
   boxEightHref1: string;
+  subHeadingNoIcon: string;
   
 
 }

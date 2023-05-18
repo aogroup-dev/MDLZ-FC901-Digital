@@ -21,6 +21,7 @@ interface IAccordionFour{
     href4: string;
     link5: string;
     href5: string;
+    onLinkClick: (link: string, colour: string) => void;
 }
 
 
@@ -51,6 +52,10 @@ function AccordionFourComponent(props: IAccordionFour){
         return links[index] || '';
     }
 
+    const handleLinkClick = (link: string, colour: string) => {
+        props.onLinkClick(link, colour);
+    }
+
 
     return (
         <div className="col-12 col-md-6 col-lg-3 box">
@@ -78,7 +83,7 @@ function AccordionFourComponent(props: IAccordionFour){
                 {checkLinkIndex(indexMain) ? checkLinkIndex(indexMain).split(/\r\n|\r|\n/g).map((item, index) => {return (
                     <div id={`flush-collapseFour-${indexMain}`} className={`accordion-collapse${colourChecker(props.colour)}-4 collapse link-box`} aria-labelledby={`flush-headingFour-${indexMain}`} data-bs-parent="#accordionFlushExample-4">
                     <div className="accordion-body">
-                    <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index] || "#57479d2e-f06d-445f-8150-c7c3e0a7b318"} key={item}>{item}</a>
+                    <a href='#toolbox' onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index], props.colour)} key={item}>{item}</a>
                     </div>
                     </div>
                     );}) : null}
@@ -112,7 +117,7 @@ function AccordionFourComponent(props: IAccordionFour){
                 {checkLinkIndex(indexMain) ? checkLinkIndex(indexMain).split(/\r\n|\r|\n/g).map((item, index) => {return (
                     <div id={`flush-collapseFour-${indexMain}`} className={`accordion-collapse${colourChecker(props.colour)}-4 collapse link-box`} aria-labelledby={`flush-headingFour-${indexMain}`} data-bs-parent="#accordionFlushExample-4">
                     <div className="accordion-body">
-                    <a target='_blank' rel="noreferrer" href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>
+                    <a href='#toolbox' onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index], props.colour)} key={item}>{item}</a>
                     </div>
                     </div>
                     );}) : null}

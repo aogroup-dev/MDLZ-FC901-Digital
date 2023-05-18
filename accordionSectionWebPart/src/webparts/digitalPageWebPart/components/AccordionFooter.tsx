@@ -23,6 +23,7 @@ interface IAccordionFooter{
     linkHref4: string;
     link5: string;
     linkHref5: string;
+    onLinkClick: (link: string, colour: string) => void;
 }
 
 function AccordionFooterComponent(props: IAccordionFooter) {
@@ -52,6 +53,10 @@ function AccordionFooterComponent(props: IAccordionFooter) {
         return hrefs[index] || '';
     }
 
+    const handleLinkClick = (link: string, colour: string) => {
+        props.onLinkClick(link, colour);
+    }
+
 
 
 
@@ -78,7 +83,7 @@ function AccordionFooterComponent(props: IAccordionFooter) {
                 <div id={`flush-collapse${indexMain}`} className={`news-accordion-collapse${colourChecker(props.colour)} collapse link-box`} aria-labelledby={`flush-heading${indexMain}`} data-bs-parent="#accordionFlushExample-5">
                 <div className="accordion-body">
 
-                <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex] || "#57479d2e-f06d-445f-8150-c7c3e0a7b318"} key={linkItem}>{linkItem}</a>
+                <a href='#toolbox' onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex], props.colour)} key={linkItem}>{linkItem}</a>
                 </div>
                 </div>
                 );}) : null}
@@ -109,7 +114,7 @@ function AccordionFooterComponent(props: IAccordionFooter) {
                 <div id={`flush-collapse${indexMain}`} className={`news-accordion-collapse${colourChecker(props.colour)} collapse link-box`} aria-labelledby={`flush-heading${indexMain}`} data-bs-parent="#accordionFlushExample-5">
                 <div className="accordion-body">
 
-                <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex] || "#57479d2e-f06d-445f-8150-c7c3e0a7b318"} key={linkItem}>{linkItem}</a>
+                <a href='#toolbox' onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex], props.colour)} key={linkItem}>{linkItem}</a>
                 </div>
                 </div>
                 );}) : null}
