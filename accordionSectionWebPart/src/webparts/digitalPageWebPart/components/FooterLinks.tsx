@@ -44,7 +44,7 @@ function FooterLinksComponent(props: IFooterLinks){
             <div className="e-links">
             {props.link1 ? props.link1.split(/\r\n|\r|\n/g).map((item, index, arr) =>{return (
                 <div>
-                    {index === arr.length - 1 ? <a className='bottom-link' href={props.linkHref1.split(/\r\n|\r|\n/g).pop() || "#"} key={item}>{item}</a> : <a className='link' href={props.linkHref1.split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>}
+                    {index === arr.length - 1 ? <a className='bottom-link' href={props.linkHref1.split(/\r\n|\r|\n/g).pop() || "#"} key={item} target='_blank'>{item}</a> : <a className='link' href={props.linkHref1.split(/\r\n|\r|\n/g)[index] || "#"} key={item} target='_blank'>{item}</a>}
                 </div>
                 );}) : null}
                 </div>
@@ -61,7 +61,7 @@ function FooterLinksComponent(props: IFooterLinks){
             <div className="e-links">
             {props.link1 ? props.link1.split(/\r\n|\r|\n/g).map((item, index, arr) =>{return (
                 <div>
-                    {index === arr.length - 1 ? <a className='bottom-link' href={props.linkHref1.split(/\r\n|\r|\n/g).pop() || "#"} key={item}>{item}</a> : <a className='link' href={props.linkHref1.split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>}
+                    {index === arr.length - 1 ? <a className='bottom-link' href={props.linkHref1.split(/\r\n|\r|\n/g).pop() || "#"} key={item} target='_blank'>{item}</a> : <a className='link' href={props.linkHref1.split(/\r\n|\r|\n/g)[index] || "#"} key={item} target='_blank'>{item}</a>}
                 </div>
                 );}) : null}
                 </div>

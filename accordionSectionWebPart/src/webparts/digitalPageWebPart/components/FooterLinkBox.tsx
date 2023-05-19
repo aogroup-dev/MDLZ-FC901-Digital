@@ -43,7 +43,7 @@ function FooterLinkBoxComponent(props: IFooterLinkBox) {
             </div>
             {props.link1 ? props.link1.split(/\r\n|\r|\n/g).map((item, index, arr) => { return (
             <div className="e-links">
-                {index == arr.length -1 ? <a className='bottom-link text-nowrap' href={props.linkHref1.split(/\r\n|\r|\n/g).pop() || "#"} key={item}>{item}</a> : <a className='link' href={props.linkHref1.split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>}
+                {index == arr.length -1 ? <a className='bottom-link text-nowrap' href={props.linkHref1.split(/\r\n|\r|\n/g).pop() || "#"} key={item} target='_blank'>{item}</a> : <a className='link' href={props.linkHref1.split(/\r\n|\r|\n/g)[index] || "#"} key={item} target='_blank'>{item}</a>}
                 <div className="img-pic">
                     {/* <img src={img} alt="" className="img-fluid picture"/> */}
                 </div>
@@ -65,7 +65,7 @@ function FooterLinkBoxComponent(props: IFooterLinkBox) {
                 <div className="img-pic">
                     {/* <img src={img} alt="" className="img-fluid picture"/> */}
                 </div>
-                {index == arr.length -1 ? <a className='bottom-link text-nowrap' href={props.linkHref1.split(/\r\n|\r|\n/g).pop() || "#"} key={item}>{item}</a> : <a  className='link' href={props.linkHref1.split(/\r\n|\r|\n/g)[index] || "#"} key={item}>{item}</a>}
+                {index == arr.length -1 ? <a className='bottom-link text-nowrap' href={props.linkHref1.split(/\r\n|\r|\n/g).pop() || "#"} key={item} target='_blank'>{item}</a> : <a  className='link' href={props.linkHref1.split(/\r\n|\r|\n/g)[index] || "#"} key={item} target='_blank'>{item}</a>}
             </div>
             )}): null}
         </div>

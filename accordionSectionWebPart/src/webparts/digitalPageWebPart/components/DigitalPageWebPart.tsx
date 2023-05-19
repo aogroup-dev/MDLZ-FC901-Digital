@@ -21,9 +21,11 @@ export default class DigitalPageWebPart extends React.Component<IDigitalPageWebP
     state: {
       selectedPdfLink: string;
       selectedColour: string;
+      selectedTitle: string;
     } = {
       selectedPdfLink: '',
       selectedColour: '',
+      selectedTitle: '',
     };
   
     constructor(props: IDigitalPageWebPartProps) {
@@ -33,13 +35,13 @@ export default class DigitalPageWebPart extends React.Component<IDigitalPageWebP
       this.handleStateChange = this.handleStateChange.bind(this);
     }
   
-    handleStateChange(link: string, colour: string) {
-      this.setState({ selectedPdfLink: link, selectedColour: colour });
+    handleStateChange(link: string, colour: string, title: string) {
+      this.setState({ selectedPdfLink: link, selectedColour: colour, selectedTitle: title });
     }
 
   public render(): React.ReactElement<IDigitalPageWebPartProps> {
     
-    const { selectedPdfLink, selectedColour } = this.state;
+    const { selectedPdfLink, selectedColour, selectedTitle } = this.state;
   
     // console.log(selectedPdfLink);
     
@@ -205,7 +207,7 @@ export default class DigitalPageWebPart extends React.Component<IDigitalPageWebP
             <FooterLinksComponent image={image7} imagePosition={imageSevenPosition} title={title7} colour={colour7} link1={boxSevenLink1} linkHref1={boxSevenHref1}/>
             <FooterLinkBoxComponent image={image8} imagePosition={imageEightPosition} title={title8} colour={colour8} link1={boxEightLink1} linkHref1={boxEightHref1}/>
           </div>
-        <ToolBoxSectionComponent selectedColour={selectedColour} selectedLink={selectedPdfLink}/>
+        <ToolBoxSectionComponent selectedText={selectedTitle} selectedColour={selectedColour} selectedLink={selectedPdfLink}/>
         
         </div>
       </section>

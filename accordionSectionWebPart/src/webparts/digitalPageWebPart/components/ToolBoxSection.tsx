@@ -9,6 +9,7 @@ import DocViewer, { DocViewerRenderers } from "react-doc-viewer";
 interface IToolBoxSection{
     selectedLink: string;
     selectedColour: string;
+    selectedText: string;
 }
 
 
@@ -22,12 +23,23 @@ function ToolBoxSectionComponent(props: IToolBoxSection) {
         "#a52323": "#c97b7b",
         "#623e24": "#917861",
         "#724d8d": "#957aa9",
-        "#666666": "buttonGrey",
-        "#e18719": "buttonOrange",
+        "#666666": "#9d9d9d",
+        "#e18719": "#eaab5ee",
     };
 
     function colourChecker(colour: string) : string{
         return colorToButtonClassMap[colour] || '';
+    }
+
+    const allowedExtensions = ["bmp", "doc", "docx", "htm", "html", "jpg", "jpeg", "pdf", "png", "ppt", "pptx", "tiff", "txt", "xls", "xlsx"];
+
+    function filterLinks(link: string) : boolean {
+        const extension = link.split(".").pop()?.toLowerCase();
+        if (allowedExtensions.indexOf(extension) !== -1) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     const docs = [
@@ -41,10 +53,10 @@ function ToolBoxSectionComponent(props: IToolBoxSection) {
         <div>
 
 
-            {props.selectedLink && (
+            {filterLinks(props.selectedLink) && (
                 <div id='toolbox'>
                     <div className="toolbox-header" style={{backgroundColor: props.selectedColour}}>
-                        <h5 className='text-uppercase text-white text-center headings'>R&D digital toolbox user guide</h5>
+                        <h5 className='text-uppercase text-white text-center headings'>{props.selectedText}</h5>
                     </div>
 
                     <DocViewer documents={docs} style={{backgroundColor: colourChecker(props.selectedColour)}} className='toolbox-section' pluginRenderers={DocViewerRenderers} config={{

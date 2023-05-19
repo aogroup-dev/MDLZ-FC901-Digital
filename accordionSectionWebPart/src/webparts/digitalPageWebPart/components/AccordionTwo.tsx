@@ -19,7 +19,7 @@ interface IAccordionTwo{
     linkHref3: string;
     link4: string;
     linkHref4: string;
-    onLinkClick: (link: string, colour: string) => void;
+    onLinkClick: (link: string, colour: string, title: string) => void;
 
 }
 
@@ -54,28 +54,21 @@ function AccordionTwoComponent(props: IAccordionTwo){
             return links[index] || '';
         }
 
-    // function showSection(){
-    //     const section = document.getElementById('');
-    //     if (section.style.display === "none") {
-    //         section.style.display = "block";
-    //     } else {
-    //         section.style.display = "none";
-    //     }
-        
-    // }
 
-    const handleLinkClick = (link: string, colour: string) => {
-        props.onLinkClick(link, colour);
+    const handleLinkClick = (link: string, colour: string, title: string) => {
+        props.onLinkClick(link, colour, title);
     }
 
-    // function showSection(){
-    //     const section = document.getElementById('toolbox');
-    //     if (section.style.display === "none") {
-    //         section.style.display = "block";
-    //     } else {
-    //         section.style.display = "none";
-    //     }
-    // }
+    const allowedExtensions = ["bmp", "doc", "docx", "htm", "html", "jpg", "jpeg", "pdf", "png", "ppt", "pptx", "tiff", "txt", "xls", "xlsx"];
+
+    function filterLinks(link: string) : boolean {
+        const extension = link.split(".").pop()?.toLowerCase();
+        if (allowedExtensions.indexOf(extension) !== -1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     return (
         <div className="col-12 col-md-6 col-lg-3 box">
@@ -100,7 +93,7 @@ function AccordionTwoComponent(props: IAccordionTwo){
         {checkLinkIndex(indexMain) ? checkLinkIndex(indexMain).split(/\r\n|\r|\n/g).map((item, index) => {return (
             <div id={`flush-collapseTwo-${indexMain}`} className={`accordion-collapse${colourChecker(props.colour)}-1 collapse link-box`} aria-labelledby={`flush-headingTwo-${indexMain}`} data-bs-parent="#accordionFlushExample-2">
             <div className="accordion-body">
-            <a href='#toolbox' key={item} onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index], props.colour)}>{item}</a>
+            {filterLinks(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index]) ? <a href='#toolbox' key={item} onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index], props.colour, item)}>{item}</a> : <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index]} key={item} target='_blank' onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index], props.colour, item)}>{item}</a>}
             </div>
             </div>
             );}) : null}
@@ -109,9 +102,8 @@ function AccordionTwoComponent(props: IAccordionTwo){
                 )}): null}
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="flush-headingTwo-2">
-                    <a href="toolbox" className={`buttons focus ${colourChecker(props.colour)}-2 accordion-button collapsed no-plus`} onClick={() => handleLinkClick(props.subHeadingLink, props.colour)}>
-                        {props.subHeadingNoIcon}
-                    </a>
+                    {filterLinks(props.subHeadingLink) ? <a href="#toolbox" className={`buttons focus ${colourChecker(props.colour)}-2 accordion-button collapsed no-plus`} onClick={() => handleLinkClick(props.subHeadingLink, props.colour, props.subHeadingNoIcon)}>{props.subHeadingNoIcon}</a> : <a href={props.subHeadingLink} target='_blank' className={`buttons focus ${colourChecker(props.colour)}-2 accordion-button collapsed no-plus`} onClick={() => handleLinkClick(props.subHeadingLink, props.colour, props.subHeadingNoIcon)}>{props.subHeadingNoIcon}</a>}
+                    
                     </h2>
                 </div>
 
@@ -140,7 +132,7 @@ function AccordionTwoComponent(props: IAccordionTwo){
         {checkLinkIndex(indexMain) ? checkLinkIndex(indexMain).split(/\r\n|\r|\n/g).map((item, index) => {return (
             <div id={`flush-collapseTwo-${indexMain}`} className={`accordion-collapse${colourChecker(props.colour)}-2 collapse link-box`} aria-labelledby={`flush-headingTwo-${indexMain}`} data-bs-parent="#accordionFlushExample-2">
             <div className="accordion-body">
-            <a href='#toolbox' key={item} onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index], props.colour)}>{item}</a>
+            {filterLinks(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index]) ? <a href='#toolbox' key={item} onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index], props.colour, item)}>{item}</a> : <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index]} key={item} target='_blank' onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index], props.colour, item)}>{item}</a>}
             </div>
             </div>
             );}) : null}
@@ -149,9 +141,7 @@ function AccordionTwoComponent(props: IAccordionTwo){
                 )}): null}
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="flush-headingFour-2">
-                    <a href='#toolbox' onClick={() => handleLinkClick(props.subHeadingLink, props.colour)} className={`buttons focus ${colourChecker(props.colour)}-2 accordion-button collapsed no-plus`}>
-                        {props.subHeadingNoIcon}
-                    </a>
+                    {filterLinks(props.subHeadingLink) ? <a href="#toolbox" className={`buttons focus ${colourChecker(props.colour)}-2 accordion-button collapsed no-plus`} onClick={() => handleLinkClick(props.subHeadingLink, props.colour, props.subHeadingNoIcon)}>{props.subHeadingNoIcon}</a> : <a href={props.subHeadingLink} target='_blank' className={`buttons focus ${colourChecker(props.colour)}-2 accordion-button collapsed no-plus`} onClick={() => handleLinkClick(props.subHeadingLink, props.colour, props.subHeadingNoIcon)}>{props.subHeadingNoIcon}</a>}
                     </h2>
                 </div>
                 </div>
