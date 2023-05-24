@@ -178,17 +178,11 @@ export default class DigitalPageWebPart extends React.Component<IDigitalPageWebP
 
       boxEightLink1,
       boxEightHref1,
-      // selectedLink,
 
 
 
  } = this.props;
 
-//  const [selectedLink, setSelectedLink] = React.useState('https://collaboration.mdlz.com/:b:/r/sites/DigitalResearchandDevelopment/Shared%20Documents/purpose/RD%20V2030%20Priorities%20Oct%202022.pdf');
-
-// const handleLinkClick = (link: string) => {
-//   setSelectedLink(link);
-// }
 
 
 

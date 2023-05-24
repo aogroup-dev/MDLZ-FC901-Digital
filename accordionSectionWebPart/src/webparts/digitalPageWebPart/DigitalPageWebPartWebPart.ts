@@ -467,7 +467,7 @@ export default class DigitalPageWebPartWebPart extends BaseClientSideWebPart<IDi
               ]
             },
             
-            ,
+            
           ]
         },
         {

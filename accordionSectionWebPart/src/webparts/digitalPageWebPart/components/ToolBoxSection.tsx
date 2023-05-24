@@ -2,7 +2,6 @@ import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import '../components/AccordionComponent.scss';
-// import FileViewer from 'react-file-viewer';
 import DocViewer, { DocViewerRenderers } from "react-doc-viewer";
 
 
@@ -14,7 +13,7 @@ interface IToolBoxSection{
 
 
 
-function ToolBoxSectionComponent(props: IToolBoxSection) {
+function ToolBoxSectionComponent(props: IToolBoxSection) : JSX.Element {
 
     const colorToButtonClassMap : {[key: string]: string} = {
         "#287819": "#72a769",
@@ -43,8 +42,8 @@ function ToolBoxSectionComponent(props: IToolBoxSection) {
     }
 
     const docs = [
-        { uri: props.selectedLink }, // Local File
-      ];
+        { uri: props.selectedLink },
+    ];
 
    // https://collaboration.mdlz.com/:b:/r/sites/DigitalResearchandDevelopment/Shared%20Documents/purpose/Digital-R-D-Home_Sona%20and%20Nicx%20comments.pdf
 

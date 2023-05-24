@@ -26,7 +26,7 @@ interface IAccordionFooterTwo{
     onLinkClick: (link: string, colour: string, title: string) => void;
 }
 
-function AccordionFooterTwoComponent(props: IAccordionFooterTwo){
+function AccordionFooterTwoComponent(props: IAccordionFooterTwo) : JSX.Element{
 
     const colorToButtonClassMap : {[key: string]: string} = {
         "#287819": "buttonGreen",
@@ -92,7 +92,7 @@ function AccordionFooterTwoComponent(props: IAccordionFooterTwo){
                             <div id={`flush-collapseSix-${indexMain}`} className={`career-accordion-collapse${colourChecker(props.colour)} collapse link-box`} aria-labelledby={`flush-headingSix-${indexMain}`} data-bs-parent="#accordionFlushExample-6">
                             <div className="accordion-body">
                             {filterLinks(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index]) ? <a href='#toolbox' onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index], props.colour, item)} key={item}>{item}</a> :
-                            <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index]} onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index], props.colour, item)} target='_blank' key={item}>{item}</a>}
+                            <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index] || "#"} onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index], props.colour, item)} target='_blank' rel="noreferrer" key={item}>{item}</a>}
                             
                             </div>
                             </div>
@@ -123,7 +123,7 @@ function AccordionFooterTwoComponent(props: IAccordionFooterTwo){
                             {checkLinkIndex(indexMain) ? checkLinkIndex(indexMain).split(/\r\n|\r|\n/g).map((item, index) => {return (
                             <div id={`flush-collapseSix-${indexMain}`} className={`career-accordion-collapse${colourChecker(props.colour)} collapse link-box`} aria-labelledby={`flush-headingSix-${indexMain}`} data-bs-parent="#accordionFlushExample-6">
                             <div className="accordion-body">
-                            {filterLinks(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index]) ? <a href='#toolbox' onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index], props.colour, item)} key={item}>{item}</a> : <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index]} onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index], props.colour, item)} target='_blank' key={item}>{item}</a>}
+                            {filterLinks(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index]) ? <a href='#toolbox' onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index], props.colour, item)} key={item}>{item}</a> : <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index] || "#"} onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[index], props.colour, item)} target='_blank' rel="noreferrer" key={item}>{item}</a>}
                             </div>
                             </div>
                             );}) : null}

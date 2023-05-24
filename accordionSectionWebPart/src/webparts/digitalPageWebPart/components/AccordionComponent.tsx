@@ -25,7 +25,7 @@ interface IAccordionSection{
     // onColourChange: (colour: string) => void;
 }
 
-function AccordionSection(props: IAccordionSection){
+function AccordionSection(props: IAccordionSection) : JSX.Element{
 
     const colorToButtonClassMap : {[key: string]: string} = {
         "#287819": "buttonGreen",
@@ -87,21 +87,21 @@ return (
                     <div className="accordion accordion-flush">
                         {props.subHeading ? props.subHeading.split(/\r\n|\r|\n/g).map((itemMain, indexMain, arr) => {return (
                         <div className="accordion-item" key={indexMain}>
-                        <h2 className="accordion-header" id={`flush-heading-${indexMain}`}>
-                        {indexMain === arr.length - 1 ? <a className={`buttons focus ${colourChecker(props.colour)}-1 accordion-button collapsed last-button`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-${indexMain}`} aria-expanded="false" aria-controls={`flush-collapse-${indexMain}`}>{itemMain}</a> :
+                            <h2 className="accordion-header" id={`flush-heading-${indexMain}`}>
+                            {indexMain === arr.length - 1 ? <a className={`buttons focus ${colourChecker(props.colour)}-1 accordion-button collapsed last-button`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-${indexMain}`} aria-expanded="false" aria-controls={`flush-collapse-${indexMain}`}>{itemMain}</a> :
                             <a href="" className={`buttons focus ${colourChecker(props.colour)}-1 accordion-button collapsed`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-${indexMain}`} aria-expanded="false" aria-controls={`flush-collapse-${indexMain}`}>
                                 {itemMain}
                             </a>} 
                             </h2>
                             
-                        {checkLinkIndex(indexMain) ? checkLinkIndex(indexMain).split(/\r\n|\r|\n/g).map((linkItem, linkIndex) => {return (
-                        <div id={`flush-collapse-${indexMain}`} className={`accordion-collapse${colourChecker(props.colour)}-1 collapse link-box`} aria-labelledby={`flush-heading-${indexMain}`} data-bs-parent="#accordionFlushExample">
+                            {checkLinkIndex(indexMain) ? checkLinkIndex(indexMain).split(/\r\n|\r|\n/g).map((linkItem, linkIndex) => {return (
+                            <div id={`flush-collapse-${indexMain}`} className={`accordion-collapse${colourChecker(props.colour)}-1 collapse link-box`} aria-labelledby={`flush-heading-${indexMain}`} data-bs-parent="#accordionFlushExample">
                         
-                        <div className="accordion-body">
-                        
-                        {filterLinks(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex]) ? <a href='#toolbox' onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex], props.colour, linkItem)} key={linkItem}>{linkItem}</a> : <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex]} target='_blank' onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex], props.colour, linkItem)} key={linkItem}>{linkItem}</a>}
-                        
-                        </div>
+                            <div className="accordion-body">
+
+                                {filterLinks(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex]) ? <a href='#toolbox' onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex], props.colour, linkItem)} key={linkItem}>{linkItem}</a> : <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex] || "#"} target='_blank' rel="noreferrer" onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex], props.colour, linkItem)} key={linkItem}>{linkItem}</a>}
+
+                            </div>
 
                         
                         </div>
@@ -109,10 +109,10 @@ return (
                         
                         );}) : null}
 
-                        </div>
+                    </div>
                     )}): null}
 
-                    </div>
+                </div>
                 </div>
                     </div>}
             </div>
@@ -142,7 +142,7 @@ return (
                         
                         <div className="accordion-body">
                         
-                        {filterLinks(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex]) ? <a href='#toolbox' onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex], props.colour, linkItem)} key={linkItem}>{linkItem}</a> : <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex]} target='_blank' onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex], props.colour, linkItem)} key={linkItem}>{linkItem}</a>}
+                        {filterLinks(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex]) ? <a href='#toolbox' onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex], props.colour, linkItem)} key={linkItem}>{linkItem}</a> : <a href={checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex] || "#"} target='_blank' rel="noreferrer" onClick={() => handleLinkClick(checkLinkHrefIndex(indexMain).split(/\r\n|\r|\n/g)[linkIndex], props.colour, linkItem)} key={linkItem}>{linkItem}</a>}
                         
                         </div>
                         
@@ -158,7 +158,7 @@ return (
                     <img className="img-fluid" src={props.image} alt=""/>
                     </div>
                 </div>}
-            </div> }
+            </div>}
     </div>
 
 );

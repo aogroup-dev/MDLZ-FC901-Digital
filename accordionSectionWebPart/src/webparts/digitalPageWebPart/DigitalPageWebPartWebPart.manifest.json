@@ -24,7 +24,7 @@
     "properties": {
       "title1": "Purpose",
       "imageOnePosition": true,
-      "boxOnesubHeading1": "",
+      "boxOnesubHeading1": "#",
       "colour1": "#287819",
       "boxOneLink1": "#",
       "boxOneHref1": "#",
@@ -39,7 +39,9 @@
 
       "title2": "capabilities",
       "imageTwoPosition": true,
-      "boxTwosubHeading1": "",
+      "subHeading": " ",
+      "subHeadingNoIcon": " ",
+      "subHeadingLink":" ",
       "colour2": "#2d6eaa",
       "boxTwoLink1": "#",
       "boxTwoHref1": "#",
