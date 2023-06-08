@@ -75,8 +75,9 @@ return (
 
                     
         {props.imagePosition ? (
+            < >
+            {props.title !== "" && 
             <div className={`h-100 bG-${colourChecker(props.colour)}-1`} >
-                    {props.title !== "" && 
                     <div>
                     <img className="img-fluid" src={props.image} alt=""/>
                 <div className="accordion-box" id="accordionFlushExample">
@@ -114,10 +115,12 @@ return (
 
                 </div>
                 </div>
-                    </div>}
             </div>
+                    </div>}
+            </>
                 ):
             <div>
+            <>
             {props.title !== "" && 
                     
                 <div className="accordion-box" id="accordionFlushExample">
@@ -158,7 +161,9 @@ return (
                     <img className="img-fluid" src={props.image} alt=""/>
                     </div>
                 </div>}
+                </>
             </div>}
+            
     </div>
 
 );

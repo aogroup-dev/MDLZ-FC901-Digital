@@ -1,7 +1,7 @@
 import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import '../components/AccordionComponent.scss'
+import '../components/AccordionComponent.scss';
 
 interface IAccordionFour{
     image: string;
@@ -71,8 +71,9 @@ function AccordionFourComponent(props: IAccordionFour) : JSX.Element{
     return (
         <div className="col-12 col-md-6 col-lg-3 box">
             {props.imagePosition ? (
-                <div className={`h-100 bG-${colourChecker(props.colour)}-4`}>
+                <>
         {props.title !== "" && 
+        <div className={`h-100 bG-${colourChecker(props.colour)}-4`}>
         <div>
         <img className="img-fluid" src={props.image} alt=""/>
         <div className="accordion-box-4" id="accordionFlushExample-4">
@@ -105,8 +106,9 @@ function AccordionFourComponent(props: IAccordionFour) : JSX.Element{
 
             </div>
         </div>
+            </div>
         </div>}
-                </div>
+        </>
             ) : <div>
                         {props.title !== "" && 
         <div>

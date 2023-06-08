@@ -73,8 +73,9 @@ function AccordionTwoComponent(props: IAccordionTwo): JSX.Element{
     return (
         <div className="col-12 col-md-6 col-lg-3 box">
         {props.imagePosition ? (
-        <div className={`h-100 bG-${colourChecker(props.colour)}-2`}>
+            <>
         {props.title !== "" && 
+        <div className={`h-100 bG-${colourChecker(props.colour)}-2`}>
         <div>
         <img className="img-fluid" src={props.image} alt=""/>
         <div className="accordion-box-2" id="accordionFlushExample-2">
@@ -109,9 +110,10 @@ function AccordionTwoComponent(props: IAccordionTwo): JSX.Element{
 
             </div>
             </div>
+            </div>
         </div>}
-                </div>
-            ) :         <div>
+        </>
+            ) : <div>
             {props.title !== "" && 
             <div>
             

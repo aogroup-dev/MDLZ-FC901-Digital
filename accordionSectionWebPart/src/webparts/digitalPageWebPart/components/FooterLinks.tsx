@@ -33,11 +33,12 @@ function FooterLinksComponent(props: IFooterLinks) : JSX.Element{
 
         <div className="col-12 col-md-6 col-lg-3 box">
         {props.imagePosition ? (
-            <div className={`h-100 bG-${colourChecker(props.colour)}-7`}>
+        < >
                 {props.title !== "" && 
+            <div className={`h-100 bG-${colourChecker(props.colour)}-7`}>
         <div>
         <img src={props.image} alt="" className="img-fluid"/>
-        <div className={`grey-digital-links body-${colourChecker(props.colour)}-1`}>
+        <div className={`body-${colourChecker(props.colour)}-1`}>
             <div className={`enterpise-digital-links header-${colourChecker(props.colour)}-1`}>
                 <h5 className='headings text-uppercase'>{props.title}</h5>
             </div>
@@ -49,8 +50,9 @@ function FooterLinksComponent(props: IFooterLinks) : JSX.Element{
                 );}) : null}
                 </div>
         </div>
-        </div>}
             </div>
+        </div>}
+        </>
         ) : <div>
             {props.title !== "" && 
         <div>

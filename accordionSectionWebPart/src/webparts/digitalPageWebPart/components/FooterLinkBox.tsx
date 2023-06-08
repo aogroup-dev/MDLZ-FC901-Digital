@@ -34,8 +34,9 @@ function FooterLinkBoxComponent(props: IFooterLinkBox): JSX.Element {
     return (
         <div className="col-12 col-md-6 col-lg-3 box">
             {props.imagePosition ? (
-                <div className={`h-100 bG-${colourChecker(props.colour)}-8`}>
+            < >
         {props.title !== "" && 
+        <div className={`h-100 bG-${colourChecker(props.colour)}-8`}>
         <div>
         <div className={`digital-links-box  body-${colourChecker(props.colour)}`}  style={{backgroundImage: `url(${props.image})`}}>
             <div className={`digital-Quick-links header-${colourChecker(props.colour)}`}>
@@ -50,8 +51,9 @@ function FooterLinkBoxComponent(props: IFooterLinkBox): JSX.Element {
             </div>
             )}): null}
         </div>
+            </div>
     </div>}
-                </div>
+        </>
             ) : <div>
         {props.title !== "" && 
         <div>

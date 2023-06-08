@@ -1,5 +1,5 @@
 import * as React from 'react';
-import '../components/AccordionComponent.scss'
+import '../components/AccordionComponent.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
@@ -74,8 +74,9 @@ function AccordionThreeComponent(props: IAccordionThree) : JSX.Element{
     return (
         <div className="col-12 col-md-6 col-lg-3 box">
             {props.imagePosition ? (
-                <div className={`h-100 bG-${colourChecker(props.colour)}-3`}>
+                <>
                 {props.title !== "" && 
+                <div className={`h-100 bG-${colourChecker(props.colour)}-3`}>
         <div>
         <img className="img-fluid" src={props.image} alt=""/>
         <div className="accordion-box-3" id="accordionFlushExample-3">
@@ -108,8 +109,9 @@ function AccordionThreeComponent(props: IAccordionThree) : JSX.Element{
 
             </div>
         </div>
+            </div>
         </div>}
-                </div>
+        </>
             ): <div>
                         {props.title !== "" && 
         <div>

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import '../components/AccordionComponent.scss'
+import '../components/AccordionComponent.scss';
 
 
 
@@ -72,8 +72,9 @@ function AccordionFooterTwoComponent(props: IAccordionFooterTwo) : JSX.Element{
     return (
         <div className="col-12 col-md-6 col-lg-3 box">
             {props.imagePosition ? (
-                <div className={`h-100 bG-${colourChecker(props.colour)}-6`}>
+                <>
             {props.title !== "" && 
+            <div className={`h-100 bG-${colourChecker(props.colour)}-6`}>
             <div>
                     <img className="img-fluid" src={props.image} alt=""/>
                     <div className="accordion-box-6" id="accordionFlushExample-6">
@@ -103,8 +104,9 @@ function AccordionFooterTwoComponent(props: IAccordionFooterTwo) : JSX.Element{
 
                         </div>
                     </div>
-                </div>}
                 </div>
+                </div>}
+                </>
             ): <div>
             {props.title !== "" && 
             <div>
